@@ -1,0 +1,8 @@
+# Adapted from: https://toha-guides.netlify.app/posts/getting-started/prepare-site/
+# section information
+section:
+  name: Recent Posts
+  id: recent-posts
+  enable: true
+  weight: 3
+  showOnNavbar: true

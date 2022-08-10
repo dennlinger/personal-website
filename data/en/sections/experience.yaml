@@ -1,0 +1,97 @@
+# Adapted from: https://toha-guides.netlify.app/posts/getting-started/prepare-site/
+# section information
+section:
+  name: Experience
+  id: experience
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experience
+experience:
+
+# - company:
+#     name: Heidelberg University
+#     url: "https://dbs.ifi.uni-heidelberg.de/"
+#     location: Heidelberg, Germany
+#     # company overview
+#     overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+#   positions:
+#   - designation: PhD Student
+#     start: June 2019
+#     # don't provide end date if you are currently working there. It will be replaced by "Present"
+#     # end: Dec 2020
+#     # give some points about what was your responsibilities at the company.
+#     responsibilities:
+#     - Design and develop XYZ tool for ABC task
+#     - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
+#     - Lead backend team.
+
+- company:
+    name: Amazon Research
+    url: "https://www.amazon.science"
+    location: Berlin, Germany
+    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+  positions:
+  - designation: Applied Scientist Intern
+    start: Aug 2021
+    end: Dec 2021
+    responsibilities:
+    - Write lots of example codes.
+    - Read lots of examples.
+    - See lots of example videos.
+
+- company:
+    name: Codefy GmbH
+    url: "https://codefy.de"
+    location: Heidelberg, Germany
+    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+  positions:
+  - designation: Software Engineer (part-time)
+    start: Sept 2019
+    end: Jan 2021
+    responsibilities:
+    - Write lots of example codes.
+    - Read lots of examples.
+    - See lots of example videos.
+  
+- company:
+    name: SAP SE
+    url: "https://www.sap.com"
+    location: Walldorf, Germany
+    overview: At SAP, I was part of the Product & Innovations team, working on cloud-based ML solutions.
+  positions:
+  - designation: Software Engineering Intern
+    start: June 2018
+    end: Sept 2018
+    responsibilities:
+    - Optimization of Machine Learning operations with randomized algorithms
+    - Achieved up to 1000x speed-up while maintaining comparable accuracy
+    - Extensively benchmarked solutions to highlight performance discrepancies in existing tools
+
+- company:
+    name: Heidelberg University
+    url: "https://www.informatik.uni-heidelberg.de"
+    location: Heidelberg, Germany
+    overview: Throughout my studies, I taught at different groups within the Institute of Computer Science.
+  positions:
+  - designation: Teaching Assistant
+    start: Oct 2018
+    end: March 2019
+    responsibilities:
+    - Teaching Assistant for the graduate lecture "Complex Network Analysis"
+    - Additionally, helped design the assignments and final exam
+  - designation: Teaching Assistant
+    start: April 2016
+    end: Sept 2017
+    responsibilities:
+    - Teaching Assistant for the lectures "Databases 1" in Summer 2016 and summer 2017
+    - Lecture Assistant for the graduate course "Computer Graphics" in Winter 2016/17
+    - Prepared and held weekly tutorial sessions for students and graded assignments
+  - designation: Student Assistant
+    start: Feb 2015
+    end: March 2016
+    responsibilities:
+    - Tasked with the integration of a group's website into the new corporate identity template

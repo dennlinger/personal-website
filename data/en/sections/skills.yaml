@@ -1,0 +1,40 @@
+# Adapted from: https://toha-guides.netlify.app/posts/getting-started/prepare-site/
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Python
+  # logo: "/images/sections/skills/pytorch.svg"
+  summary: "This is the primary language used in most of my projects. I am a strong proponent of [PEP-8](https://peps.python.org/pep-0008/) and function typing. On top, I am experienced in deploying and maintaining my own Python packages on PyPI."
+  # url: "https://python.org"
+
+- name: Machine Learning
+  # logo: "todo"
+  summary: "I have extensive theoretical and practical knowledge of ML and its best practices. This ranges from exploratory data analysis and data pre-processing, to experimental design and evaluation, all the way to model training and deployment."
+
+- name: Huggingface Transformers
+  # logo: "todo"
+  summary: "By accident, I have become one of the earlier adopters of the `transformers` library in early 2020. By now, I rank as the [top 2 contributor](https://stackoverflow.com/tags/huggingface-transformers/topusers) on the Stackoverflow tag. I have also [contributed trained models and datasets](https://huggingface.co/dennlinger) to the Huggingface Hub myself."
+  # url: 
+
+- name: Pytorch
+  # logo: "todo"
+  summary: "I first started using Pytorch during my studies in 2017. The majority of my own ML experiments is written at least partially with pure Pytorch, and I have previously worked with cloud-based deployments of Pytorch solutions on GCP and AWS."
+  # url: 
+
+- name: Public Speaking
+  # logo: "todo"
+  summary: "My extensive experience as a Teaching Assistant, as well being a presenter at conferences, has made me comfortable speaking in front of others. This especially includes explaining scientific concepts to audiences at various levels of difficulty."
+
+- name: Mentorship & Advising
+  # logo: "todo"
+  summary: "As a PhD student, I have been supervising a number of student projects, including semester research practicals, seminar projects, as well as BSc & MSc theses. Over time, I have developed my own system for effective supervision."
