@@ -1,0 +1,13 @@
+# Copyright Notice
+copyright: © 2022 Copyright.
+
+# Meta description for your site.  This will help the search engines to find your site.
+description: Personal homepage and blog of Dennis Aumiller. PhD Student in Information Retrieval and Natural Language Processing.
+
+# Specify OpenGraph Headers
+# Adjusted from https://github.com/hugo-toha/hugo-toha.github.io/blob/source/data/en/site.yaml
+openGraph:
+  title: Dennis Aumiller
+  type: website
+  description: Personal homepage and blog of Dennis Aumiller
+  url: https://dennis-aumiller.de

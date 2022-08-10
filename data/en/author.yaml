@@ -1,0 +1,22 @@
+# Adjusted from https://github.com/hugo-toha/hugo-toha.github.io/blob/source/data/en/author.yaml
+# some information about you
+name: "Dennis Aumiller"
+nickname: "Dennis"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+# image: "images/author/john.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "dennis.aumiller@gmail.com"
+  phone: "+49 176 81747622"
+  github: dennlinger
+  linkedin: dennis-aumiller
+
+# some summary about what you do
+summary:
+  - Text Summarization
+  - Text Simplification
+  - Natural Language Processing
+  - Information Retrieval
+  - Python Programming
+  - Huggingface Transformers
