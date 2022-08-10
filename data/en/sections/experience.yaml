@@ -33,15 +33,15 @@ experience:
     name: Amazon Research
     url: "https://www.amazon.science"
     location: Berlin, Germany
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    overview: Situated within the organization of Amazon Search, I was part of a newly formed team investigating the applicability of multilingual NLP solutions for search scenarios.
   positions:
   - designation: Applied Scientist Intern
     start: Aug 2021
     end: Dec 2021
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Investigated sequential recommendation systems for customer query suggestions
+    - Extracted suitable dataset and implemented a pipeline for neural sequential recommender
+    - Found flaws for tail queries in the existing live system and reported preliminary improvements in recall with my own sequential recommender tool
 
 - company:
     name: Codefy GmbH
@@ -53,9 +53,10 @@ experience:
     start: Sept 2019
     end: Jan 2021
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Built backend for product prototype, helping the company secure 200.000€ in seed funding
+    - Primary lead on document processing, developing a pipeline suitable for diverse document types
+    - Optimized document database operators, improving ingestion time by over 30%
+    - Built prototype for unsupervised keyphrase extraction module on legal documents
   
 - company:
     name: SAP SE
