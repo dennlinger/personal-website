@@ -14,8 +14,8 @@ languages:
 # Control TOC depth
 markup:
   tableOfContents:
-    startLevel: 2
-    endLevel: 4
+    startLevel: 1
+    endLevel: 6
     ordered: false
 
 # At least HTML and JSON are required for the main HTML content and
@@ -31,17 +31,39 @@ enableEmoji: true
 
 # Site parameters
 params:
+
+  # Background image of the landing page
+  # background: /images/site/background.jpg
+
+  # Provide logos for your site. The inverted logo will be used in the initial
+  # transparent navbar and the main logo will be used in the non-transparent navbar.
+  #logo:
+    # main: /images/site/main-logo.png
+    # inverted: /images/site/inverted-logo.png
+    #favicon: /images/favicon.ico
+
   # GitHub repo URL and branch of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/dennlinger/academic-website
   gitBranch: main
+  
+  # Configure the number of section title visible in the top navbar
+  topNavbar:
+    maxVisibleSections: 7
 
-  # specify whether you want to write some blog posts or not
-  enableBlogPost: true
+  # Enabling dark mode
+  darkMode:
+    enable: true
+    provider: darkreader
+    default: system
 
-  # specify whether you want to show Table of Contents in reading page
+  # Specify whether you want to write some blog posts or not
+  blog:
+    enable: true
+
+  # Specify whether you want to show Table of Contents in reading page
   enableTOC: true
 
-  # specify whether you want the language flags to be displayed. 
+  # Specify whether you want the language flags to be displayed. 
   showFlags: false
 
   # Provide newsletter configuration. 
@@ -51,6 +73,6 @@ params:
     # specify whether you want to display the newsletter form 
     enable: false
     # specify which newsletter provider you want to use
-    provider: mailchimp
+    # provider: mailchimp
     # specify the target URL for the subscription form
-    mailchimpURL: false
+    # mailchimpURL: false
