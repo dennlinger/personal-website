@@ -34,13 +34,10 @@ publications:
     url: https://sigir.org/sigir2022/
   authors:
   - name: "Dennis Aumiller*"
-    url: https://example.com
+  # url: https://example.com  # Allows for links to other authors
   - name: Satya Almasian*
-    url: https://example.com
   - name: David Pohl
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: We present an interactive interface, unifying the access to several temporal annotation frameworks. Aside from a graphical interface, we allow users to programmatically access the various tools through a streamlined API interface.
     url: https://dl.acm.org/doi/pdf/10.1145/3477495.3531670
@@ -51,12 +48,10 @@ publications:
   publishedIn:
     name: LREC 2022
     date: June 2022
-    url: https://example.com
+    url: https://lrec2022.lrec-conf.org/en/
   authors:
   - name: Dennis Aumiller
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "We present a high-quality resource of full-text alignments between German Wikipedia, and a German children's encyclopedia. This yields a dataset that we empirically show to be suited for both summarization and simplification tasks."
     url: https://arxiv.org/abs/2201.07198
@@ -70,11 +65,8 @@ publications:
     url: https://text2story22.inesctec.pt/
   authors:
   - name: Satya Almasian*
-    url: https://example.com
   - name: Dennis Aumiller*
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "Following a series of prior experiments in English, we outline a generalized training procedure for training a non-English temporal tagger with weakly supervised data. For this purpose, we utilize existing rule-based taggers as a way to scale up existing training resources in low-resource settings by several orders of magnitude."
     url: https://www.di.ubi.pt/~jpaulo/T2S/paper9.pdf
@@ -88,9 +80,7 @@ publications:
     url: https://www.beck-shop.de/ltz-legaltech-/product/33655033?gclid=Cj0KCQjwrs2XBhDjARIsAHVymmTONiPC9_uWdBMlEMSgNeuGNn3pJobMCp8ZNeN64TkFKnNgKkQ7eWsaAnAwEALw_wcB
   authors:
   - name: Michael Gertz
-    url: https://example.com
   - name: Dennis Aumiller
-    url: https://example.com
   paper:
     summary: In this (German) article, we outline the challenges that are currently preventing mainstream adoption of recent NLP advancements in the legal industry. Primarily, this can be attributed to a lack of proper domain generalization, as well as limited interpretability and scalability of such models.
     # url: https://example.com
@@ -104,11 +94,8 @@ publications:
     url: https://arxiv.org
   authors:
   - name: Satya Almasian*
-    url: https://example.com
   - name: Dennis Aumiller*
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "We experimented with various transformer-based architectures to see which ones would work best for extracting temporal annotations, such as 'yesterday' or 'every week'. However, we have since found a significant flaw in our evaluation setup for seq2seq-based models, so we decided to retract this article. Resulting tagging-based models are still valid, though, and are [available online](https://huggingface.co/satyaalmasian/temporal_tagger_BERT_tokenclassifier)."
     # url: https://arxiv.org/abs/2109.14927
@@ -122,13 +109,9 @@ publications:
     url: https://icail.lawgorithm.com.br/
   authors:
   - name: Dennis Aumiller*
-    url: https://example.com
   - name: Satya Almasian*
-    url: https://example.com
   - name: Sebastian Lackner
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "Utilizing existing segmentation tools, which primarily operate on sentence-level granularity, yields poor performance when segmenting long documents, which are prevalent in a legal context. In this work, we address the issue by proposing a weakly-supervised paragraph-based segmenter, which we empirically show on a novel dataset consisting of web Terms of Service documents."
     url: https://arxiv.org/abs/2012.03619
@@ -142,13 +125,9 @@ publications:
     url: https://ornlcda.github.io/SDProc/
   authors:
   - name: Dennis Aumiller*
-    url: https://example.com
   - name: Satya Almasian*
-    url: https://example.com
   - name: Philip Hausner*
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "We participated in the workshop's shared task on extracting relevant paper sections in cited works. Interestingly, we show that our setup based on traditional search heuristics, coupled with improved pre-processing steps, outperforms our BERT-based retrieval setup. Overall, we placed third on the blind shared task test set."
     url: https://aclanthology.org/2020.sdp-1.29/
@@ -162,11 +141,8 @@ publications:
     url: https://cikm2020.org/
   authors:
   - name: Philip Hausner*
-    url: https://example.com
   - name: Dennis Aumiller*
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "This demonstration illustrates a time-centric approach to content exploration. Extracting and processing temporal mentions on large document collections allows a temporal expression of events, even when the documents themselves are not ordered chronologically."
     url: https://dbs.ifi.uni-heidelberg.de/files/Team/phausner/publications/Hausner_Aumiller_Gertz_CIKM2020.pdf
@@ -180,13 +156,9 @@ publications:
     url: http://ssdbm.org/2020/
   authors:
   - name: Andreas Spitz
-    url: https://example.com
   - name: Dennis Aumiller
-    url: https://example.com
   - name: Bálint Soproni
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "Results from my Master's thesis contributed the experimental section of this work. Primarly, we present a theoretical retrieval model based on hypergraphs, and demonstrate that these operations can be utilized to perform common Information Retrieval operations more efficiently on co-occurrence based word networks than traditional dyadic graphs."
     url: https://dbs.ifi.uni-heidelberg.de/files/Team/aspitz/publications/Spitz_et_al_2020_A_Versatile_Hypergraph_Model.pdf
@@ -200,11 +172,8 @@ publications:
     url: https://text2story20.inesctec.pt/
   authors:
   - name: Philip Hausner
-    url: https://example.com
   - name: Dennis Aumiller
-    url: https://example.com
   - name: Michael Gertz
-    url: https://example.com
   paper:
     summary: "Ordering events in a chronological fashion requires a accurate modeling of the temporal hierarchy, which previously was not well-defined for long-term event horizons spanning several decades. Here, we present a temporal model that is shown to work well, even without explicit temporal ordering in underlying document collections."
     url: http://ceur-ws.org/Vol-2593/paper4.pdf
@@ -219,21 +188,13 @@ publications:
     url: https://www.nature.com/srep/
   authors:
   - name: Martin Würtz
-    url: https://example.com
   - name: Dennis Aumiller
-    url: https://example.com
   - name: Lina Gundelwein
-    url: https://example.com
   - name: Philipp Jung
-    url: https://example.com
   - name: Christian Schütz
-    url: https://example.com
   - name: Kathrin Lehmann
-    url: https://example.com
   - name: Katalin Tóth
-    url: https://example.com
   - name: Karl Rohr
-    url: https://example.com
   paper:
     summary: "In a collaboration with molecular biosciences, we developed an automated Image Processing pipeline that was able to speed up the annotation process and accuracy for determining lengths of chromatosome strands in AFM images. In this work, it was ultimately shown how mutations in a particular gene can cause different winding patterns."
     url: https://www.nature.com/articles/s41598-019-49163-4
