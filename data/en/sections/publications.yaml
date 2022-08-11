@@ -3,7 +3,7 @@ section:
   name: Publications
   id: publications
   enable: true
-  weight: 4
+  weight: 6
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -18,8 +18,8 @@ buttons:
   filter: "simplification"
 - name: "NLP"
   filter: "nlp"
-# - name: "Information Retrieval"
-#   filter: "information-retrieval"
+- name: "Information Retrieval"
+  filter: "information-retrieval"
 - name: Temporal Tagging
   filter: "temporal-tagging"
 - name: "Legal Tech"
@@ -59,22 +59,183 @@ publications:
     url: https://example.com
   paper:
     summary: "We present a high-quality resource of full-text alignments between German Wikipedia, and a German children's encyclopedia. This yields a dataset that we empirically show to be suited for both summarization and simplification tasks."
-    url: https://example.com
+    url: https://arxiv.org/abs/2201.07198
   categories: ["summarization", "simplification", "nlp"]
   tags: ["Text Summarization", "Text Simplification", "NLP"]
+
+- title: "Time for some German? Pre-Training a Transformer-based Temporal Tagger for German"
+  publishedIn:
+    name: Text2Story @ ECIR 2022
+    date: Apr 2022
+    url: https://text2story22.inesctec.pt/
+  authors:
+  - name: Satya Almasian*
+    url: https://example.com
+  - name: Dennis Aumiller*
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "Following a series of prior experiments in English, we outline a generalized training procedure for training a non-English temporal tagger with weakly supervised data. For this purpose, we utilize existing rule-based taggers as a way to scale up existing training resources in low-resource settings by several orders of magnitude."
+    url: https://www.di.ubi.pt/~jpaulo/T2S/paper9.pdf
+  categories: ["temporal-tagging", "nlp"]
+  tags: ["Temporal Tagging", "NLP"]
 
 - title: "Deep Learning und Legal Tech - Eine Bestandsaufnahme"
   publishedIn:
     name: Legal Tech Zeitschrift (LTZ) 01/2022
-    date: February 2022
-    url: https://example.com
+    date: Mar 2022
+    url: https://www.beck-shop.de/ltz-legaltech-/product/33655033?gclid=Cj0KCQjwrs2XBhDjARIsAHVymmTONiPC9_uWdBMlEMSgNeuGNn3pJobMCp8ZNeN64TkFKnNgKkQ7eWsaAnAwEALw_wcB
   authors:
   - name: Michael Gertz
     url: https://example.com
   - name: Dennis Aumiller
     url: https://example.com
   paper:
-    summary: Dolor ad cupidatat pariatur nulla ipsum ex ullamco nisi anim ullamco. Dolore elit esse in exercitation minim aliqua. Amet velit incididunt magna laboris. Proident reprehenderit deserunt ad officia duis dolor. Tempor nostrud ullamco ullamco sint deserunt cupidatat irure minim consectetur nulla adipisicing sunt.
-    url: https://example.com
+    summary: In this (German) article, we outline the challenges that are currently preventing mainstream adoption of recent NLP advancements in the legal industry. Primarily, this can be attributed to a lack of proper domain generalization, as well as limited interpretability and scalability of such models.
+    # url: https://example.com
   categories: ["nlp", "legal-tech"]
-  tags: ["Machine Learning", "Autonomous Driving", "Machine Vision"]
+  tags: ["Legal Tech", "NLP"]
+
+- title: "BERT got a Date: Introducing Transformers to Temporal Tagging"
+  publishedIn:
+    name: arXiv
+    date: Sept 2021
+    url: https://arxiv.org
+  authors:
+  - name: Satya Almasian*
+    url: https://example.com
+  - name: Dennis Aumiller*
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "We experimented with various transformer-based architectures to see which ones would work best for extracting temporal annotations, such as 'yesterday' or 'every week'. However, we have since found a significant flaw in our evaluation setup for seq2seq-based models, so we decided to retract this article. Resulting tagging-based models are still valid, though, and are [available online](https://huggingface.co/satyaalmasian/temporal_tagger_BERT_tokenclassifier)."
+    # url: https://arxiv.org/abs/2109.14927
+  categories: ["temporal-tagging", "nlp"]
+  tags: ["Temporal Tagging", "NLP"]
+
+- title: "Structural Text Segmentation of Legal Documents"
+  publishedIn:
+    name: ICAIL 2021
+    date: June 2021
+    url: https://icail.lawgorithm.com.br/
+  authors:
+  - name: Dennis Aumiller*
+    url: https://example.com
+  - name: Satya Almasian*
+    url: https://example.com
+  - name: Sebastian Lackner
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "Utilizing existing segmentation tools, which primarily operate on sentence-level granularity, yields poor performance when segmenting long documents, which are prevalent in a legal context. In this work, we address the issue by proposing a weakly-supervised paragraph-based segmenter, which we empirically show on a novel dataset consisting of web Terms of Service documents."
+    url: https://arxiv.org/abs/2012.03619
+  categories: ["legal-tech", "summarization", "nlp"]
+  tags: ["legal-tech", "Text Summarization", "NLP"]
+
+- title: "UniHD @ CL-SciSumm 2020: Citation Extraction as Search"
+  publishedIn:
+    name: SDP@EMNLP 2020
+    date: Nov 2020
+    url: https://ornlcda.github.io/SDProc/
+  authors:
+  - name: Dennis Aumiller*
+    url: https://example.com
+  - name: Satya Almasian*
+    url: https://example.com
+  - name: Philip Hausner*
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "We participated in the workshop's shared task on extracting relevant paper sections in cited works. Interestingly, we show that our setup based on traditional search heuristics, coupled with improved pre-processing steps, outperforms our BERT-based retrieval setup. Overall, we placed third on the blind shared task test set."
+    url: https://aclanthology.org/2020.sdp-1.29/
+  categories: ["information-retrieval", "nlp"]
+  tags: ["Information Retrieval", "NLP"]
+
+- title: "TiCCo: Time-Centric Content Exploration"
+  publishedIn:
+    name: CIKM 2020
+    date: Oct 2020
+    url: https://cikm2020.org/
+  authors:
+  - name: Philip Hausner*
+    url: https://example.com
+  - name: Dennis Aumiller*
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "This demonstration illustrates a time-centric approach to content exploration. Extracting and processing temporal mentions on large document collections allows a temporal expression of events, even when the documents themselves are not ordered chronologically."
+    url: https://dbs.ifi.uni-heidelberg.de/files/Team/phausner/publications/Hausner_Aumiller_Gertz_CIKM2020.pdf
+  categories: ["information-retrieval", "temporal-tagging", "nlp"]
+  tags: ["Information Retrieval", "Temporal Tagging", "NLP"]
+
+- title: "A Versatile Hypergraph Model for Document Collections"
+  publishedIn:
+    name: SSDBM 2020
+    date: July 2020
+    url: http://ssdbm.org/2020/
+  authors:
+  - name: Andreas Spitz
+    url: https://example.com
+  - name: Dennis Aumiller
+    url: https://example.com
+  - name: Bálint Soproni
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "Results from my Master's thesis contributed the experimental section of this work. Primarly, we present a theoretical retrieval model based on hypergraphs, and demonstrate that these operations can be utilized to perform common Information Retrieval operations more efficiently on co-occurrence based word networks than traditional dyadic graphs."
+    url: https://dbs.ifi.uni-heidelberg.de/files/Team/aspitz/publications/Spitz_et_al_2020_A_Versatile_Hypergraph_Model.pdf
+  categories: ["information-retrieval", "nlp"]
+  tags: ["Information Retrieval", "NLP"]
+
+- title: "Time-centric Exploration of Court Documents"
+  publishedIn:
+    name: Text2Story@ECIR 2020
+    date: Apr 2020
+    url: https://text2story20.inesctec.pt/
+  authors:
+  - name: Philip Hausner
+    url: https://example.com
+  - name: Dennis Aumiller
+    url: https://example.com
+  - name: Michael Gertz
+    url: https://example.com
+  paper:
+    summary: "Ordering events in a chronological fashion requires a accurate modeling of the temporal hierarchy, which previously was not well-defined for long-term event horizons spanning several decades. Here, we present a temporal model that is shown to work well, even without explicit temporal ordering in underlying document collections."
+    url: http://ceur-ws.org/Vol-2593/paper4.pdf
+  categories: ["information-retrieval", "temporal-tagging", "nlp"]
+  tags: ["Information Retrieval", "Temporal Tagging", "NLP"]  
+
+
+- title: "DNA accessibility of chromatosomes quantified by automated image analysis of AFM data"
+  publishedIn:
+    name: Scientific Reports
+    date: Sept 2019
+    url: https://www.nature.com/srep/
+  authors:
+  - name: Martin Würtz
+    url: https://example.com
+  - name: Dennis Aumiller
+    url: https://example.com
+  - name: Lina Gundelwein
+    url: https://example.com
+  - name: Philipp Jung
+    url: https://example.com
+  - name: Christian Schütz
+    url: https://example.com
+  - name: Kathrin Lehmann
+    url: https://example.com
+  - name: Katalin Tóth
+    url: https://example.com
+  - name: Karl Rohr
+    url: https://example.com
+  paper:
+    summary: "In a collaboration with molecular biosciences, we developed an automated Image Processing pipeline that was able to speed up the annotation process and accuracy for determining lengths of chromatosome strands in AFM images. In this work, it was ultimately shown how mutations in a particular gene can cause different winding patterns."
+    url: https://www.nature.com/articles/s41598-019-49163-4
+  categories: ["biology"]
+  tags: ["Biology"] 
