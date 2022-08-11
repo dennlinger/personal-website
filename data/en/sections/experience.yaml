@@ -4,7 +4,7 @@ section:
   name: Experience
   id: experience
   enable: true
-  weight: 5
+  weight: 4
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true 
@@ -40,14 +40,14 @@ experience:
     end: Dec 2021
     responsibilities:
     - Investigated sequential recommendation systems for customer query suggestions
-    - Extracted suitable dataset and implemented a pipeline for neural sequential recommender
+    - Extracted suitable dataset and implemented a train/test pipeline for neural seque
     - Found flaws for tail queries in the existing live system and reported preliminary improvements in recall with my own sequential recommender tool
 
 - company:
     name: Codefy GmbH
     url: "https://codefy.de"
     location: Heidelberg, Germany
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    overview: During my PhD, I was involved in a local start-up, building a document search engine for lawyers.
   positions:
   - designation: Software Engineer (part-time)
     start: Sept 2019
@@ -76,16 +76,16 @@ experience:
     name: Heidelberg University
     url: "https://www.informatik.uni-heidelberg.de"
     location: Heidelberg, Germany
-    overview: Throughout my studies, I taught at different groups within the Institute of Computer Science.
+    overview: Throughout my studies, I worked at different groups within the Institute of Computer Science.
   positions:
   - designation: Teaching Assistant
     start: Oct 2018
-    end: March 2019
+    end: Mar 2019
     responsibilities:
     - Teaching Assistant for the graduate lecture "Complex Network Analysis"
     - Additionally, helped design the assignments and final exam
   - designation: Teaching Assistant
-    start: April 2016
+    start: Apr 2016
     end: Sept 2017
     responsibilities:
     - Teaching Assistant for the lectures "Databases 1" in Summer 2016 and summer 2017
@@ -93,6 +93,6 @@ experience:
     - Prepared and held weekly tutorial sessions for students and graded assignments
   - designation: Student Assistant
     start: Feb 2015
-    end: March 2016
+    end: Mar 2016
     responsibilities:
     - Tasked with the integration of a group's website into the new corporate identity template
