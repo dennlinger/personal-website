@@ -4,7 +4,7 @@ section:
   id: education
   template: sections/education.html # Use "sections/education-alt.html for alternate template.
   enable: true
-  weight: 6
+  weight: 5
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -12,7 +12,7 @@ section:
 degrees:
 - name: "PhD in Computer Science; Supervised by: Prof. Dr. Michael Gertz"
   icon: fa-microscope
-  timeframe: 2019-exp. 2023
+  timeframe: June 2019 - exp. 2023
   institution:
     name: Database Systems Researc Group, Heidelberg University
     url: "https://dbs.ifi.uni-heidelberg.de/"
@@ -21,16 +21,12 @@ degrees:
   #   achieved: 3.6
   #   outOf: 4
   publications: #(optional)
-  - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    url: "#"
-  - title: Fusce eu augue ut odio porttitor pulvinar.
-    url: "#"
-  - title: Nullam vitae orci tincidunt purus viverra pulvinar.
-    url: "#"
+  - title: "See the [Publications](/#publications) section"
+  focus: Text Summarization and NLP
 
 - name: M.Sc. Applied Computer Science
   icon: fa-graduation-cap
-  timeframe: 2017-2019
+  timeframe: Aug 2017 - May 2019
   institution:
     name: Heidelberg University
     url: "#"
@@ -38,32 +34,16 @@ degrees:
     scale: German GPA
     achieved: "1.0"
     comment: "(with distinction; equiv. GPA: 4.0)"
-    # outOf: 
-  takenCourses: #(optional)
-    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
-    showGrades: true
-    collapseAfter: 3
-    courses:
-    - name: Data Structures and Algorithm
-      achieved: 3.75
-      outOf: 4
-    - name: Network Security
-      achieved: 3.80
-      outOf: 4
-  # publications: #(optional)
-  # - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  #   url: "#"
-  # - title: Fusce eu augue ut odio porttitor pulvinar.
-  #   url: "#"
-  extracurricularActivities: #(optional)
-  - In vitae facilisis est, eget porta sem.
-  - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
-  - Duis sed massa feugiat, ornare justo et, aliquam est.
-  - Pellentesque ut fringilla magna.
+    # outOf:
+  minor: Computational Linguistics
+  focus: NLP and Network Analysis
+  thesis:
+    title: "Implementation of a Relational Document Hypergraph for Information Retrieval"
+    comment: "Grade: 1.0 (with distinction)"
 
 - name: Exchange Year, Computer Science Program
   icon: fa-university
-  timeframe: 2017-2018
+  timeframe: Sept 2017 - Apr 2018
   institution:
     name: University of Toronto
     url: "https://www.utoronto.ca/"
@@ -74,13 +54,19 @@ degrees:
   extracurricularActivities: #(optional)
   - Executive Member, UofT eSports Club
   - Executive Member, Undergraduate AI Group
+  focus: Machine Learning and Algorithmic Game Theory
   
 - name: B.Sc. Applied Computer Science
   icon: fa-graduation-cap
-  timeframe: 2013-2017
+  timeframe: Oct 2013 - Aug 2017
   institution:
     name: Heidelberg University
   grade: #(optional)
     scale: German GPA
     achieved: 1.4
     comment: "(equiv. GPA: 3.6)"
+  minor: Computational Linguistics
+  thesis: 
+    title: "Mining Relation Networks from University Websites"
+    comment: "Grade: 1.0 (with distinction)" 
+  focus: Computer Graphics and Visualization
