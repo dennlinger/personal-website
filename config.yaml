@@ -43,8 +43,8 @@ params:
     #favicon: /images/favicon.ico
 
   # GitHub repo URL and branch of your site
-  gitRepo: https://github.com/dennlinger/academic-website
-  gitBranch: main
+  # gitRepo: https://github.com/dennlinger/personal-website
+  # gitBranch: master
   
   # Configure the number of section title visible in the top navbar
   topNavbar:
@@ -57,8 +57,9 @@ params:
     default: system
 
   # Specify whether you want to write some blog posts or not
-  blog:
-    enable: true
+  features:
+    blog:
+      enable: true
 
   # Specify whether you want to show Table of Contents in reading page
   enableTOC: true
