@@ -15,30 +15,37 @@ company:
   name: Database Systems Research Group, Heidelberg University
   url: "https://dbs.ifi.uni-heidelberg.de/team/aumiller"
 
-# your resume. this file path should be relative to you "static" directory
-# TODO: Rename to CV on website
-resume: "files/Aumiller_Dennis_CV_2022.pdf"
 
 # a summary about you
-summary: 'I am currently a fourth-year PhD Student at Heidelberg University, focusing primarily on Text Summarization, with a special interest in generating aspect-focused narratives. I do have a general interest in Natural Language Processing, particularly involving Machine Learning for NLP.
-I previously interned with [Amazon Research](https://amazon.science) and [SAP](https://sap.com), and helped build a search backend for legal documents at [Codefy](https://codefy.de/).
-As a commitment to open & reproducible research, I publish code repositories for my associated publications [on Github](https://github.com/dennlinger). As a further contribution to open source, my [questions and answers on Stackoverflow](https://stackoverflow.com/users/3607203/dennlinger) have to date reached more than half a million people worldwide.'
+summary: 'I am currently a fourth-year PhD Student at Heidelberg University, focusing primarily on Text Summarization, with a special interest in generating aspect-focused narratives. I do have a general interest in Natural Language Processing, particularly applied Machine Learning for NLP.
+I previously interned with [Amazon Research](https://amazon.science) and [SAP](https://sap.com), and helped build a search engine for lawyers at [Codefy](https://codefy.de/).
+As a commitment to open & reproducible research, I publish code repositories for my associated publications [on Github](https://github.com/dennlinger). However, my biggest contributions to open source are my [questions and answers on Stackoverflow](https://stackoverflow.com/users/3607203/dennlinger), which have to date reached more than half a million people worldwide.'
 
-# your social links
-# give as many as you want. use font-awesome for the icons.
-socialLinks:
-- name: Github
-  icon: "fab fa-github"
-  url: "https://www.github.com/dennlinger"
-- name: Twitter
-  icon: "fab fa-twitter"
-  url: "https://www.twitter.com/d_aumiller"
-- name: Linkedin
-  icon: "fab fa-linkedin"
-  url: "https://www.linkedin.com/in/dennis-aumiller"
-- name: Stackoverflow
-  icon: "fab fa-stack-overflow"
-  url: "https://stackoverflow.com/users/3607203/dennlinger"
+# TODO: These were moved to the main author page. Currently not displayed at all on this particular element.
+# # your social links
+# # give as many as you want. use font-awesome for the icons.
+# socialLinks:
+# - name: Github
+#   icon: "fab fa-github"
+#   url: "https://www.github.com/dennlinger"
+# - name: Twitter
+#   icon: "fab fa-twitter"
+#   url: "https://www.twitter.com/d_aumiller"
+# - name: Linkedin
+#   icon: "fab fa-linkedin"
+#   url: "https://www.linkedin.com/in/dennis-aumiller"
+# - name: Stackoverflow
+#   icon: "fab fa-stack-overflow"
+#   url: "https://stackoverflow.com/users/3607203/dennlinger"
+
+# # your resume. this file path should be relative to you "static" directory
+# # TODO: Rename to CV on website
+# resume: "files/Aumiller_Dennis_CV_2022.pdf"
+
+# Additional buttons next to the CV button.
+# resourceLinks:
+#   - title: "Stackoverflow"
+#     url: "https://stackoverflow.com/"
 
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.

@@ -16,7 +16,25 @@ contactInfo:
 summary:
   - Text Summarization
   - Text Simplification
-  - Natural Language Processing
   - Information Retrieval
-  - Python Programming
-  - Huggingface Transformers
+  - Python
+  - Huggingface
+  - Natural Language Processing
+
+socialLinks:
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/dennlinger"
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://www.twitter.com/d_aumiller"
+- name: Linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/dennis-aumiller"
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "https://stackoverflow.com/users/3607203/dennlinger"
+
+# your resume. this file path should be relative to you "static" directory
+# TODO: Rename to CV on website
+resume: "files/Aumiller_Dennis_CV_2022.pdf"
