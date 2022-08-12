@@ -22,6 +22,9 @@ summary:
   - Natural Language Processing
 
 socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "dennis.aumiller+website@gmail.com"
 - name: Github
   icon: "fab fa-github"
   url: "https://www.github.com/dennlinger"
