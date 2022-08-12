@@ -77,3 +77,14 @@ params:
     # provider: mailchimp
     # specify the target URL for the subscription form
     # mailchimpURL: false
+
+  footer:
+    enable: true
+
+    navigation:
+      enable: false
+      # show custom menus in the footer
+      customMenus: true
+
+    disclaimer:
+      enable: false
