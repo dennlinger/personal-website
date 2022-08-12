@@ -120,7 +120,7 @@ publications:
 
 - title: "UniHD @ CL-SciSumm 2020: Citation Extraction as Search"
   publishedIn:
-    name: SDP@EMNLP 2020
+    name: SDP @ EMNLP 2020
     date: Nov 2020
     url: https://ornlcda.github.io/SDProc/
   authors:
@@ -167,7 +167,7 @@ publications:
 
 - title: "Time-centric Exploration of Court Documents"
   publishedIn:
-    name: Text2Story@ECIR 2020
+    name: Text2Story @ ECIR 2020
     date: Apr 2020
     url: https://text2story20.inesctec.pt/
   authors:
