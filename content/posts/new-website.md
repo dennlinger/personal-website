@@ -1,11 +1,30 @@
 ---
 title: "New Personal Website"
 date: 2022-08-09T13:25:14+02:00
-draft: true
+draft: false
 ---
 
-I have recently migrated my personal website from my old codebase, which was entirely written from scratch, to a more flexible (and less time-consuming) Hugo-based website.
+I have recently migrated my personal website, which turned out to be hugely outdated, since I originally planned to write a platform entirely from scratch (spoiler: not a great idea with time constraints).
+Especially since I am not a trained web developer, I quickly realized that there are quite a few significant hurdles to overcome before I could have a somewhat decent system that relies on minimal outside dependencies, and even then, I already had acquired quite a bit of external "npm bloat".
+This doesn't even include the time I had to spend figuring out how to efficiently update my website in case of changes without requiring logins to my server every couple of days...
 
-TODO:
-  - Write about the advantages/disadvantages over the previous theme. This includes full ownership and understanding, as well as security issues. Primarily though time constraint, fluent transitions, etc. stuff in JS.
-  - Also write about the new blog, which finally should host some articles.
+Deciding to finally move on, I was looking around for a bit to see which pages (and template styles) where particularly attractive for a "dual use site". I wanted to be represented both in my [current academic role](https://dbs.ifi.uni-heidelberg.de/team/aumiller/), but also in a future career in industry.
+The focus on each of these is slightly different, which makes an integration suitable for both aspects challenging.
+
+Ultimately, the new website is based on the wonderful Hugo template [toha](https://github.com/hugo-toha/toha), which I have modified in some key aspects to suit my own style slightly better.  
+Funnily enough, one of the tasks that cost me by far the most time was me trying to stubbornly shuffle around the socials buttons right to the top. Even now, I still do not have it properly centered for all devices (especially apparent on mobile), but there is still time to fix this in the future.
+
+Despite this effort, the site does a much better job at allowing me to post regular content, as it offers a dedicated [blog page](https://dennis-aumiller.de/posts/), which you are currently reading!
+In particular, the close ties to markdown in Hugo makes it trivially easy for me to write content, without having to edit later styling elements by hand, which was a huge plus in the decision to move forward.
+
+Some of the more general points that I want to highlight in my experience with Hugo (and this particular template) so far, including some of the encountered downsides:
+
+* Hugo does offer a variety of templates that all do look nice in their respective demo pages (see many of the examples directly linked in the [Hugo template gallery](https://themes.gohugo.io/)). However, choosing one that actually satisfies all the criteria for my own needs is quite tricky. I wanted a reactive view, incorporation of publications, a dedicated blog page, as well as a template that could in the future be easily changed towards a more "industry-focused" website, assuming that I move out of academia. Even when there are sites that (on paper) match all these points, it is not immediately clear how high the effort additional required effort is to customize these pages, which was a bit annoying. At least the template I went with, toha, does offer an exceptionally well-written document that explains how to set up different page elements, but does not give too much details on how to adjust these beyond the -- sometimes rather basic -- additional properties.
+* Developing the page itself was comparatively a very pleasant experience. `hugo [-D] server` is an exceptional feature, automatically reloading pages. When something went terribly wrong and the page wouldn't load at all, the error logs were usually concise enough to figure out the cause rather quickly. This is also especially nice, since it does not require me to maintain a list of dependencies like with npm.
+* The templating itself is fairly intuitive, and for users having some basic experience with "classic" HTML/CSS/JS stacks, the page elements will feel very familiar. Despite having never worked with Hugo before, I was able to easily make modifications to otherwise more complex elements like dynamically built lists. To be fair, a large portion probably also depends on the cleanliness and maintenance of the used template, so I highly recommend looking for an actively maintained project with a minimum popularity, to save yourself some headache.
+* I personally run the Hugo server through a nginx reverse proxy, which caused me some headache during the first deployment. I would say this can be largely attributed to my prior experience with nginx, which is not much... Still, I believe that with regards to deployments (or other configuration options beyond what is Hugo), there are still not too many resources out there. It could have also been that I was simply not looking in the right place, or for the right terms.This is less of an issue if one were to deploy through Github pages, where a ton of tutorials exist, which brings me to my next point.
+* For inexperienced users, or people that really want to have a minimal amount of interaction with the site setup, the end-to-end tutorials for Github pages are fantastic. A large portion of the issues I encountered stemmed from me wanting to change things beyond the basics that were provided. This included both the internal Hugo features (e.g., styling or page elements), as well as the deployment (hosted on my own infrastructure instead of Github pages).
+* Finally, I am still missing some of the key features that a modern website should now offer out of the box: I had to create a manual "blog-like" entry, which currently serves as my [imprint](https://dennis-aumiller.de/impressum/) and [data privacy note](https://dennis-aumiller.de/datenschutz/). With a general focus on privacy aspects in the recent years, I was surprised that even now, Hugo (or rather, the current template) does not natively ship with a cookie banner extension. Ultimately, I will likely stick with this page for a while; especially since I still do have some issues to deal with.
+* Also, optimization is an aspect that I really like to take seriously. Unfortunately, from an SEO perspective, the current state of the site is also far from being optimal. But at least it is a start.
+
+I am still not sure how frequently (or lengthy) I will post on this website, but at least the basis of the blog is finally done!
