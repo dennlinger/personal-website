@@ -1,4 +1,8 @@
-# A Brief How-To on Local Inference for extremely Large Language Models
+---
+title: "A Brief How-To on Local Inference for extremely Large Language Models"
+date: 2023-01-22T12:39:31+01:00
+draft: true
+---
 
 If you are here for the TL;DR: Simply add `device_map="auto"` for any model loaded with `transformers >= 4.20.0`, which will distribute model weights across all GPUs and main memory.
 ```python
