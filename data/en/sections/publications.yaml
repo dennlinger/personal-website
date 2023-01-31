@@ -24,7 +24,7 @@ buttons:
   filter: "temporal-tagging"
 - name: "Legal Tech"
   filter: "legal-tech"
-- name "Large Language Models"
+- name: "Large Language Models"
   filter: "llms"
 
 # your publications
