@@ -24,9 +24,58 @@ buttons:
   filter: "temporal-tagging"
 - name: "Legal Tech"
   filter: "legal-tech"
+- name "Large Language Models"
+  filter: "llms"
 
 # your publications
 publications:
+- title: "On the State of German (Abstractive) Text Summarization"
+  publishedIn:
+    name: BTW 2023
+    date: Mar 2023
+    url: https://sites.google.com/view/btw-2023-tud
+  authors:
+  - name: "Dennis Aumiller"
+  # url: https://example.com  # Allows for links to other authors
+  - name: Jing Fan
+  - name: Michael Gertz
+  paper:
+    summary: Relative to the English NLP community, we find that the quality of German summarization datasets (and models) is heavily lacking; oftentimes, not even basic filtering criteria are respected when training and evaluating systems.
+    url: https://arxiv.org/abs/2301.07095
+  categories: ["summarization", "nlp"]
+  tags: ["Text Summarization", "NLP"]
+
+- title: "UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?"
+  publishedIn:
+    name: TSAR @ EMNLP 2022
+    date: Dec 2022
+    url: https://www.taln.upf.edu/pages/tsar2022-ws/
+  authors:
+  - name: "Dennis Aumiller"
+  # url: https://example.com  # Allows for links to other authors
+  - name: Michael Gertz
+  paper:
+    summary: We describe our winning submission to the shared task on lexical simplification. In principle, we extract structured predictions from GPT-3 generations, and introduce a novel way of aggregating predictions across multiple prompt templates to increase result coverage.
+    url: https://arxiv.org/abs/2301.01764
+  categories: ["simplification", "nlp", "llms"]
+  tags: ["Text Simplification", "NLP", "Large Language Models"]
+
+- title: "EUR-Lex-Sum: A Multi-and Cross-lingual Dataset for Long-form Summarization in the Legal Domain"
+  publishedIn:
+    name: EMNLP 2022
+    date: Dec 2022
+    url: https://2022.emnlp.org/
+  authors:
+  - name: "Dennis Aumiller*"
+  # url: https://example.com  # Allows for links to other authors
+  - name: Ashish Chouhan*
+  - name: Michael Gertz
+  paper:
+    summary: This work introduces a highly multilingual summarization corpus, available in all of the 24 official languages of the European Union. It is based on legal acts published by the EU, and consists of extremely long documents in the legal domain.
+    url: https://arxiv.org/abs/2210.13448
+  categories: ["summarization", "nlp"]
+  tags: ["Text Summarization", "NLP"]
+
 - title: "Online DATEing: A Web Interface for Temporal Annotations"
   publishedIn:
     name: SIGIR 2022
