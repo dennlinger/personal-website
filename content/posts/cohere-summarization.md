@@ -1,7 +1,7 @@
 ---
-title: "Cohere Summarization"
+title: "Discovery of the New Cohere Summarization Endpoint"
 date: 2023-02-24T20:51:56+01:00
-hero: "https://dennis-aumiller.de/posts/hero.png"
+hero: images/cohere-hero.png
 tags: ["Summarization"]
 categories: ["Summarization"]
 draft: false
