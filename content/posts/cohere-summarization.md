@@ -1,7 +1,7 @@
 ---
 title: "Cohere Summarization"
 date: 2023-02-24T20:51:56+01:00
-hero: hero-cohere.png
+hero: "https://dennis-aumiller.de/posts/hero.png"
 tags: ["Summarization"]
 categories: ["Summarization"]
 draft: false
