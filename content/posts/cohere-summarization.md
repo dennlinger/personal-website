@@ -1,6 +1,9 @@
 ---
 title: "Cohere Summarization"
 date: 2023-02-24T20:51:56+01:00
+hero: hero-cohere.png
+tags: ["Summarization"]
+categories: ["Summarization"]
 draft: false
 ---
 
@@ -19,7 +22,7 @@ To get a first feel of the new offering, I took the API for a spin, and want to 
 The [blog post announcing the feature](https://txt.cohere.ai/summarize-beta/) gives about as much detail as one can hope from a company: Opening with an accurate and concise system-generated TL;DR, the article then goes on to talk about some of the basic properties available.
 To me, the most interesting fact is the unusually long context available for this model (50,000 *characters* max).
 To put this length into context, we can compare it to the usually employed unit of "subword tokens". These are vaguely similar to syllables, meaning a word can be broken down into individual sub-parts, to cut down on the required vocabulary for any collection of texts (note that this is a very generic simplification of the topic and should not be taken at face value; in fact, most subwords specifically do *not* correspond to actual syllables).
-Assuming a mean subword token length of about 6 characters (based on some basic back-of-the-envelope math on top of `bert-base-uncased` model's vocabulary file), the popular 512 subword limit of most transformer models comes to about ~3,100 characters in length for comparison.
+Assuming a mean subword token length of about 6 characters (based on some basic back-of-the-envelope math on top of `bert-base-uncased` model's [vocabulary file](https://huggingface.co/bert-base-uncased/blob/main/vocab.txt)), the popular 512 subword limit of most transformer models comes to about ~3,100 characters in length for comparison.
 Extrapolating to around 50,000 characters puts this in the ballpark range of 8,192 subword units of context length, which is on the extremely high end of contexts considered in recent research.
 
 However, a key detail about the model is hidden further down in the article:

@@ -1,9 +1,9 @@
 # Copyright Notice
-copyright: "© 2022 Copyright. [Impressum](/impressum) & [Datenschutz](/datenschutz)"
+copyright: "© 2023 Copyright. [Impressum](/impressum) & [Datenschutz](/datenschutz)"
 
 
 # Meta description for your site.  This will help the search engines to find your site.
-description: Personal homepage and blog of Dennis Aumiller. PhD Student in Information Retrieval and Natural Language Processing.
+description: Personal homepage and blog of Dennis Aumiller. PhD Student in Natural Language Processing and Information Retrieval.
 
 # Specify OpenGraph Headers
 # Adjusted from https://github.com/hugo-toha/hugo-toha.github.io/blob/source/data/en/site.yaml
