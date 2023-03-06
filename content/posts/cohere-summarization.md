@@ -53,7 +53,7 @@ Based on the "additional command" parameter, it seems that a model following the
 ## Testing the waters
 
 With the speculations about implementation details out of the way, we can now actually take a look at the systems and some preliminary outputs tested by yours truly.
-Note that this is still a rather anecdotal evaluation and a more thorough investigation is planned for the future.
+Note that this is still a rather anecdotal evaluation on a fairly small (but diverse) document set and a more thorough investigation is planned for the future.
 
 In particular, I have a few general points that I look out for when interacting with summarization systems and that I will also focus on in this preliminary investigation:
 
@@ -62,7 +62,39 @@ In particular, I have a few general points that I look out for when interacting 
 3. How does the model perform for texts from different domains (medical, legal, financial texts)?
 4. How well does the system perform for texts that are *not in English*?
 5. Are there any other non-grammatical outputs, such as repetitions or otherwise incoherent segments?
+6. As a secondary focus, what is the inference time of the model?
 
+### The "dataset"
+
+I wanted to cover some fairly diverse settings, which at the same time have some relation to my own research (primarily non-English summarization and long-form summarization). These were the documents I have experimented with:
+
+* One of my [own papers](https://www.arxiv-vanity.com/papers/2201.07198/), since I can fairly accurately judge the accuracy of the resulting summary without having to read the entire document. For conversion, I rendered it with [arxiv-vanity](https://arxiv-vanity.com) and manually removed the abstract from the document to encourage sentence selection from portions not at the beginning.
+* A mail conversation I had with a colleague about a technical topic. This rather long thread is in German, which further makes this an interesting sample document of cross-lingual summarization, in addition to also being fairly difficult as a "turn-based" conversation.
+* A news article from today's list of articles on [cnn.com](https://edition.cnn.com/travel/article/best-airports-airport-service-quality-awards-aci/index.html), to avoid news articles already present in the training corpus. I particularly picked one where the information is rather well-distributed across the article, and not just present in the first few sentences again.
+* A (fairly short) German law book. I used the ["Verordnung über das Meisterprüfungsberufsbild und über die Prüfungsanforderungen in den Teilen I und II der Meisterprüfung im Dachdecker-Handwerk (Dachdeckermeisterverordnung - DachdMstrV)"](http://www.gesetze-im-internet.de/dachdmstrv_2006/BJNR126300006.html) (a law about obtaining an advanced associate's degree for the roofer trade) don't ask me why this one, it was the first one I clicked.
+
+
+### Result Summary
+
+![Image of the Cohere Playground with a summary of my Klexikon paper](https://dennis-aumiller/posts/klexikon-bullets.png)
+*"Recursive Summarization": Summarizing my own work on summarization with the Cohere endpoint.*
+
+I'll start with some interesting observations about the factuality of responses (1). Without generalizing from these results, I personally had much more success in obtaining consistent answers when going for generation in the "bullets" format over coherently written "paragraphs".
+Especially the paragraphs format was extremely sensitive to the generation temperature, and even with fairly low values (0.3) I sometimes got completely unfounded facts (e.g., that my dataset was created by researchers at the "Max Planck Institute for Psycholingustics", despite me being at Heidelberg University").  
+Otherwise, especially for news-like articles, the consistency was surprisingly good, even if some references where incorrectly attributed in the German-to-English setting.
+
+![Factual mistake in the generated output of the German law text](https://dennis-aumiller/posts/factual-error.png)
+*Instance of a factually incorrect statement. The law goes into effect on the 1st October, 2006 (last sentence in the German text); the stated date (23rd May 2006) is mentioned as the document creation date at the very beginning of the article.*
+
+Regarding the multilinguality (4), I can happily report that it works to some extent; the endpoint is capable of "processing" German articles, but even with explicit prompts being added, will only respond in English. This is still a significant step-up, but probably not entirely useful for customers looking into summarizing documents in other languages.
+Translations were in my understanding pretty much always accurate; some fluency issues could be observed in the translation of the German law text, but I would argue that I myself could not have done a better job, either.
+
+Similarly, fluency or repetitions have not been an issue at all (5). In none of the tested scenarios did I encounter output text that was plain "ungrammatical". I am not sure if Cohere employs output post-processing steps, such as *n*-gram blocking or similar, but it seems that the RLHF-trained models (i.e., most instruction fine-tuned models right now) have less problems with that anyways.
+
+For longer input texts, I noticed that the system was focusing a lot on what appears to be (sub-)headings of the texts, or otherwise shorter segments; this has happened to me when utilizing embedding-based extractive methods (such as the modified LexRank approach mentioned before), which are generally suited better for shorter segments. This is not necessarily a bad thing, but requires careful pre-processing by users for instances where the actual document body is more relevant than heading text.
+
+The only problem regarding the sentence selection (2) was for the mail thread. While the output text accurately summarized the individual turns (e.g., individual responses without focusing on previous parts overly much), it failed to account for the "reading direction" of pasted mail inputs. Instead of reading "bottom-to-top", as with most mail interactions, the system interpreted the reading direction as "top-to-bottom", which inherently caused the summary to be inverted.
+The mail setting was also the example where it was the easiest to identify that sentences were not just chosen from the beginning, precisely because it did indeed focus on multiple different parts.
 
 
 
@@ -74,8 +106,9 @@ I expect that they will **expand the examples and documentation** website. Curre
 Secondly, **explicit training for multilingual summary** experiences could be a possible extension. The model already exhibits a (albeit weak) multilingual tendency, which allows users to explore foreign-to-English summarization settings. If Cohere manages to extend their functionality to some of the other languages with a potential customer base, this could be a realistic extension.  
 Something that will also likely be expanded is the **degree of customization possible**. While the (beta) endpoint already includes generic parameters such as "length", "extractiveness" and a mild form of styling ("bullets" or "paragraphs" being the available choices), recent trends in summarization research have shifted to a much broader degree of "controllable generation". Similar directions can be observed in the "more general LLM research", where instruction-tuned tooling is strongly preferred by users over more generic LLMs.  
 While there is also an option to give user-specified free-form instructions is already in place, it **currently does not seem to affect the produced output** too much. If Cohere manages to expand on the customization options available this way, a much more generic set of "summarization-like" tasks could be approached. This includes, for example, writing [entity-centric summaries](https://aclanthology.org/2022.acl-long.237.pdf), where the summary provides a much more targeted text compared to a (broader) input document, or [data-to-text](https://ai.googleblog.com/2021/01/totto-controlled-table-to-text.html) settings, which is highly relevant in financial/business settings.  
-However, more important will be the degree of **adoption by clients**; I suspect that we will see the emergence of more tailored endpoints in the near future, which specifically cater to the needs of different specialized domains, again, possibly for specific legal/financial/medical documents. Here, a much stricter focus on factuality is generally required, and if *useful* application scenarios can be identified, it requires the adoption of slightly more consistent summary generation than currently possible. I am not convinced at this point that the "extractiveness" parameter delivers the required level of factual accuracy, yet.
+However, more important will be the degree of **adoption by clients**; I suspect that we will see the emergence of more tailored endpoints in the near future, which specifically cater to the needs of different specialized domains, again, possibly for specific legal/financial/medical documents. Here, a much stricter focus on factuality is generally required, and if *useful* application scenarios can be identified, it requires the adoption of slightly more consistent summary generation than currently possible. I am not fully convinced at this point that the "extractiveness" parameter delivers the required level of factual accuracy, yet. If users are interested in consistent answers, then **the bullets-style format seems to be the more reliable choice**.
 
 In summary (no pun intended), it seems that Cohere has not released a major groundbreaking leap forward at the scale of chatGPT -- but they might not have to. Providing a highly usable experience to a smaller set of dedicated users can pay off for them in the long run; a concise feature set with *real application value* to users will ultimately beat the comparatively flashy but less straightforward chatGPT.
 As for myself, I am currently evaluating the model on a broader dataset for performance on academically used evaluation metrics; so stay tuned for a part two!
 
+PS: This post's title image was taken in UBC's beautiful Botanical Garden, which I visited just before starting my exchange year in Toronto in August 2017.
