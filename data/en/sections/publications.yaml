@@ -29,6 +29,23 @@ buttons:
 
 # your publications
 publications:
+
+- title: "Evaluating Factual Consistency of Texts with Semantic Role Labeling"
+  publishedIn:
+    name: "*SEM @ ACL 2023"
+    date: July 2023
+    url: https://sites.google.com/view/starsem2023
+  authors:  
+  - name: Jing Fan*
+  - name: "Dennis Aumiller*"
+  # url: https://example.com  # Allows for links to other authors
+  - name: Michael Gertz
+  paper:
+    summary: Automatically checking whether generated text is factually consistent with an input segment is still challenging. We present a method that goes against the recent trend of directly utilizing large language models to evaluate factuality, and instead propose a more linguistically grounded approach, based on Semantic Role Labels.
+    url: https://arxiv.org/abs/2305.13309
+  categories: ["summarization", "nlp"]
+  tags: ["Text Summarization", "NLP"]
+
 - title: "On the State of German (Abstractive) Text Summarization"
   publishedIn:
     name: BTW 2023
@@ -165,7 +182,7 @@ publications:
     summary: "Utilizing existing segmentation tools, which primarily operate on sentence-level granularity, yields poor performance when segmenting long documents, which are prevalent in a legal context. In this work, we address the issue by proposing a weakly-supervised paragraph-based segmenter, which we empirically show on a novel dataset consisting of web Terms of Service documents."
     url: https://arxiv.org/abs/2012.03619
   categories: ["legal-tech", "summarization", "nlp"]
-  tags: ["legal-tech", "Text Summarization", "NLP"]
+  tags: ["Legal Tech", "Text Summarization", "NLP"]
 
 - title: "UniHD @ CL-SciSumm 2020: Citation Extraction as Search"
   publishedIn:

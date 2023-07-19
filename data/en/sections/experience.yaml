@@ -40,7 +40,7 @@ experience:
     end: Dec 2021
     responsibilities:
     - Investigated sequential recommendation systems for customer query suggestions
-    - Extracted suitable dataset and implemented a train/test pipeline for neural seque
+    - Built dataset and implemented a training/evaluation pipeline for neural search query generation
     - Found flaws for tail queries in the existing live system and reported preliminary improvements in recall with my own sequential recommender tool
 
 - company:
