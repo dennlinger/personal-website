@@ -78,14 +78,14 @@ A quick note on the reproducibility: The temperature setting for all my experime
 
 ### Result Summary
 
-![Image of the Cohere Playground with a summary of my Klexikon paper](https://dennis-aumiller/posts/klexikon-bullets.png)
+![Image of the Cohere Playground with a summary of my Klexikon paper](https://dennis-aumiller.de/posts/klexikon-bullets.png)
 *"Recursive Summarization": Summarizing my own work on summarization with the Cohere endpoint.*
 
 I'll start with some interesting observations about the factuality of responses (1). Without generalizing from these results, I personally had much more success in obtaining consistent answers when going for generation in the "bullets" format over coherently written "paragraphs".
 Especially the paragraphs format was extremely sensitive to the generation temperature, and even with fairly low values (0.3) I sometimes got completely unfounded facts (e.g., that my dataset was created by researchers at the "Max Planck Institute for Psycholingustics", despite me being at Heidelberg University").  
 Otherwise, especially for news-like articles, the consistency was surprisingly good, even if some references where incorrectly attributed in the German-to-English setting.   
 
-![Factual mistake in the generated output of the German law text](https://dennis-aumiller/posts/factual-error.png)
+![Factual mistake in the generated output of the German law text](https://dennis-aumiller.de/posts/factual-error.png)
 *Instance of a factually incorrect statement. The law goes into effect on the 1st October, 2006 (last sentence in the German text); the stated date (23rd May 2006) is mentioned as the document creation date at the very beginning of the article.*
 
 Regarding the multilinguality (4), I can happily report that it works to some extent; the endpoint is capable of "processing" German articles, but even with explicit prompts being added, will only respond in English. This is still a significant step-up, but probably not entirely useful for customers looking into summarizing documents in other languages.
