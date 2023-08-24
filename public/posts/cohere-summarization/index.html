@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discovery of the New Cohere Summarization Endpoint</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/favicon_hu685b8fb3d4b27a2cc7f4e33909b9f6ef_27442_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Discovery of the New Cohere Summarization Endpoint" />
+<meta property="og:description" content="Two weeks ago, Cohere.ai announced their new dedicated summarization endpoint! For someone currently doing their PhD on text summarization, this is both worrying, but obviously also a rather intriguing development: while recent advancements have been focusing on rather broadly applicable models (think, chatGPT), providing more task-specific alternatives seems to be the niche that Cohere is carving out for themselves.
+Adding to the surprise of seeing a dedicated summarization endpoint is the fact that text summarization is really hard; in the last 50 years, a lot of progress has been made, but our current state-of-the-art models still suffer from annoying problems such as correctly retaining factuality of the input text." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dennis-aumiller.de/posts/cohere-summarization/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-05T20:51:56+01:00" />
+<meta property="article:modified_time" content="2023-03-05T20:51:56+01:00" />
+
+
+    
+    
+<meta name="description" content="Discovery of the New Cohere Summarization Endpoint" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      Dennis Aumiller</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Blog</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/default-avatar_hu14f0e8d4ff4f8d886d80ac94e4f6abfd_365411_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Dennis Aumiller</h5>
+          <p>Sunday, March 5, 2023</p>
+        </div>
+
+        <div class="title">
+          <h1>Discovery of the New Cohere Summarization Endpoint</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>Two weeks ago, <a href="https://cohere.ai">Cohere.ai</a> announced their <a href="https://txt.cohere.ai/summarize-beta/">new dedicated summarization endpoint</a>!
+For someone currently doing their PhD on text summarization, this is both <a href="https://i.kym-cdn.com/entries/icons/original/000/025/817/Screen_Shot_2018-03-30_at_11.34.27_AM.png">worrying</a>, but obviously also a rather intriguing development: while recent advancements have been focusing on rather broadly applicable models (think, <a href="https://openai.com/blog/chatgpt/">chatGPT</a>), providing more task-specific alternatives seems to be the <a href="https://txt.cohere.ai/multilingual/">niche that Cohere is carving out for themselves</a>.<br>
+Adding to the surprise of seeing a dedicated summarization endpoint is the fact that text summarization is really hard; in the last 50 years, a lot of progress has been made, but our current state-of-the-art models still suffer from annoying problems such as <a href="https://aclanthology.org/2020.emnlp-main.750/">correctly retaining factuality of the input text</a>.
+Another problem is the actual definition of &ldquo;summaries&rdquo; in different domains. Methods for generating a &ldquo;good&rdquo; summary of a news article are generally useless when it comes to generating the summary of a court ruling, or generating radiology reports from doctor notes.
+Due to the combination of these (and other) factors, there are comparatively few productive settings in which summarization is actively used. To my knowledge, the two main applications using some form of summarization right now are some news aggregators, summarizing information from multiple news articles (which primarily uses extractive methods, meaning directly copying existing sentences from the input documents), as well as the recently introduced <a href="https://ai.googleblog.com/2022/03/auto-generated-summaries-in-google-docs.html">&ldquo;Document TL;DR&rdquo; generator in Google Docs</a> (the latter using a variant of their own PEGASUS neural model).</p>
+<p>This lack of tooling and remaining issues also means that companies (read: &ldquo;paying customers&rdquo;) are relatively unlikely to employ summarization systems or plan task settings where they would be directly used. While the imagined benefits of summarization systems are high, the current risks associated with their usage and the practical issues arising from their usage still outweigh these benefits.
+However, the fact that Cohere has a <a href="https://txt.cohere.ai/free-developer-tier-announcement/">free tier available</a>, as well as their claim of having a broadly applicable endpoint, makes it drastically more available to not only customers, but also the associated research community (and other folks keen on exploring AI-based tooling).
+To get a first feel of the new offering, I took the API for a spin, and want to put this new endpoint into the context of currently ongoing research.</p>
+<h2 id="what-we-know-about-their-model">What we know about their model</h2>
+<p>The <a href="https://txt.cohere.ai/summarize-beta/">blog post announcing the feature</a> gives about as much detail as one can hope from a company: Opening with an accurate and concise system-generated TL;DR, the article then goes on to talk about some of the basic properties available.
+To me, the most interesting fact is the unusually long context available for this model (50,000 <em>characters</em> max).
+To put this length into context, we can compare it to the usually employed unit of &ldquo;subword tokens&rdquo;. These are vaguely similar to syllables, meaning a word can be broken down into individual sub-parts, to cut down on the required vocabulary for any collection of texts (note that this is a very generic simplification of the topic and should not be taken at face value; in fact, most subwords specifically do <em>not</em> correspond to actual syllables).
+Assuming a mean subword token length of about 6 characters (based on some basic back-of-the-envelope math on top of <code>bert-base-uncased</code> model&rsquo;s <a href="https://huggingface.co/bert-base-uncased/blob/main/vocab.txt">vocabulary file</a>), the popular 512 subword limit of most transformer models comes to about ~3,100 characters in length for comparison.
+Extrapolating to around 50,000 characters puts this in the ballpark range of 8,192 subword units of context length, which is on the extremely high end of contexts considered in recent research.</p>
+<p>However, a key detail about the model is hidden further down in the article:</p>
+<p>&ldquo;<em>[&hellip;]We extract key sentences from the document up to the context length, and then generate a synthetic document composed of the combination of those key sentences.</em>&rdquo;</p>
+<h3 id="hybrid-summarization-to-the-rescue">Hybrid Summarization to the rescue!</h3>
+<p>This is a strong indicator that Cohere makes use of a joint architecture which is known as a <em>hybrid</em> summarization system, and is a popular trick to circumvent the general length limitations of transformer models. As described in the quote, the first part of a hybrid summarization pipeline consists of a &ldquo;selector&rdquo; method, which will highlight and extract a number of segments (usually sentences) in the original document. In research, this is also called an &ldquo;extractive&rdquo; summarization system, and will ensure that any text part is guaranteed to appear in the input document, which makes generation both cheaper and faster. Ultimately, this first stage is therefore used to drastically cut down the context length, without sacrificing too much loss in relevant content for the final summary at this stage.<br>
+Only during the subsequent stage, a larger (and more expensive) language model is then run to actually generate what we call an &ldquo;abstractive&rdquo; system, i.e., generated text does <em>not</em> necessarily appear in the original input, and can constitute a re-write of segments (or, more worryingly, can be made up completely).
+Importantly, this use of preliminary selectors, which are often comparatively cheap approaches, drastically improve the computational efficiency of the entire pipeline compared to a &ldquo;direct&rdquo; approach, such as feeding an input text directly into a GPT-like model.</p>
+<h3 id="a-likely-extractor">A likely extractor</h3>
+<p>There are of course different ways in which the pre-selection can be done, and nothing more is said in the article itself. Without further information, we can speculate on the specific details based on popular extractive models (which constitute the first part of the pipeline).<br>
+Given the input length limitations, it is unlikely that Cohere is employing an extractive model which is performing extractive summarization with Transformers, e.g., <a href="https://github.com/nlpyang/PreSumm">PreSumm</a> or similar libraries. This is based primarily on the fact that the length limitations are also applicable in extractive settings. Furthermore, utilizing a supervised extractive model requires additional training data on &ldquo;segment relevance&rdquo; (i.e., judging which sentences are to be extracted); this again is highly dependent on the text&rsquo;s domain and potentially limiting the generalizing qualities of such a system.<br>
+In my opinion more likely is a pipeline employing an unsupervised approach. Here, no specific training data is required, and oftentimes these methods have a decent performance across different domains.
+One very likely approach is the combination of <a href="https://arxiv.org/abs/1109.2128">LexRank</a>, a tried-and-tested method from 2004, augmented with modern sentence embeddings. This use case is <a href="https://github.com/UKPLab/sentence-transformers/tree/master/examples/applications/text-summarization">even suggested by Nils Reimers</a>, himself Director of Machine Learning at Cohere.
+Especially with Cohere providing dedicated (multilingual) embedding endpoints, this is also a neat way to integrate several of their endpoints in one go.<br>
+Finally, it can be argued that unsupervised approaches also provide a more reasonable cost for inference, depending on their use of neural architectures internally. However, using embeddings generated with neural models kind of defeats any argument on performance, so this is no certainty.</p>
+<h3 id="details-on-the-abstractive-part">Details on the abstractive part</h3>
+<p>Based on further parameters available, there seems to be good reason to assume that the abstractive model is largely based on Cohere&rsquo;s existing <code>.generate()</code> architecture, with some additional fine-tuning towards specific summarization tasks.
+We can assume that some labeled training data was obtained to learn the distinction of different output styles (paragraph vs bullets) and extractiveness (note that this parameter is not available in the Beta playground endpoint, but rather <a href="https://docs.cohere.ai/reference/summarize-2#3-define-model-settings">only mentioned in the docs</a>).
+I have tried to extract portions of the used prompt, however, it seems that Cohere has sufficient query blockers in place to prevent a &ldquo;quick investigation&rdquo; from my side, at least.
+Based on the &ldquo;additional command&rdquo; parameter, it seems that a model following the instruction-fine-tuning paradigm was already used for this purpose, which would make this more similar to Cohere&rsquo;s &ldquo;command-xlarge-nightly&rdquo; model than the older (more generic) &ldquo;xlarge&rdquo; variant.</p>
+<h2 id="testing-the-waters">Testing the waters</h2>
+<p>With the speculations about implementation details out of the way, we can now actually take a look at the systems and some preliminary outputs tested by yours truly.
+Note that this is still a rather anecdotal evaluation on a fairly small (but diverse) document set and a more thorough investigation is planned for the future.</p>
+<p>In particular, I have a few general points that I look out for when interacting with summarization systems and that I will also focus on in this preliminary investigation:</p>
+<ol>
+<li>Are they capable of retaining factuality between the input and the summary?</li>
+<li>What part of the text is relevant information extracted from? Are relevant sentences clustered around the beginning, or actually appearing later in the text?</li>
+<li>How does the model perform for texts from different domains (legal, financial texts)?</li>
+<li>How well does the system perform for texts that are <em>not in English</em>?</li>
+<li>Are there any other non-grammatical outputs, such as repetitions or otherwise incoherent segments?</li>
+<li>As a secondary focus, what is the inference time of the model?</li>
+</ol>
+<h3 id="the-dataset">The &ldquo;dataset&rdquo;</h3>
+<p>I wanted to cover some fairly diverse settings, which at the same time have some relation to my own research (primarily non-English summarization and long-form summarization). These were the documents I have experimented with:</p>
+<ul>
+<li>One of my <a href="https://www.arxiv-vanity.com/papers/2201.07198/">own papers</a>, since I can fairly accurately judge the accuracy of the resulting summary without having to read the entire document. For conversion, I rendered it with <a href="https://arxiv-vanity.com">arxiv-vanity</a> and manually removed the abstract from the document to encourage sentence selection from portions not at the beginning.</li>
+<li>A mail conversation I had with a colleague about a technical topic. This rather long thread is in German, which further makes this an interesting sample document of cross-lingual summarization, in addition to also being fairly difficult as a &ldquo;turn-based&rdquo; conversation.</li>
+<li>A news article from today&rsquo;s list of articles on <a href="https://edition.cnn.com/travel/article/best-airports-airport-service-quality-awards-aci/index.html">cnn.com</a>, to avoid news articles already present in the training corpus. I particularly picked one where the information is rather well-distributed across the article, and not just present in the first few sentences again.</li>
+<li>A (fairly short) German law book. I used the <a href="http://www.gesetze-im-internet.de/dachdmstrv_2006/BJNR126300006.html">&ldquo;Verordnung über das Meisterprüfungsberufsbild und über die Prüfungsanforderungen in den Teilen I und II der Meisterprüfung im Dachdecker-Handwerk (Dachdeckermeisterverordnung - DachdMstrV)&rdquo;</a> (a law about obtaining an advanced associate&rsquo;s degree for the roofer trade) don&rsquo;t ask me why this one, it was the first one I clicked.</li>
+</ul>
+<p>A quick note on the reproducibility: The temperature setting for all my experiments was between 0.0 and 0.8, which is fairly low. Even so, with non-zero temperature, the reproducibility of results <em>is not guaranteed</em>. This means that my insights (despite attempts with repeated &ldquo;sampling&rdquo;) may not be always the same. Please bear this in mind!</p>
+<h3 id="result-summary">Result Summary</h3>
+<p><img src="https://dennis-aumiller/posts/klexikon-bullets.png" alt="Image of the Cohere Playground with a summary of my Klexikon paper">
+<em>&ldquo;Recursive Summarization&rdquo;: Summarizing my own work on summarization with the Cohere endpoint.</em></p>
+<p>I&rsquo;ll start with some interesting observations about the factuality of responses (1). Without generalizing from these results, I personally had much more success in obtaining consistent answers when going for generation in the &ldquo;bullets&rdquo; format over coherently written &ldquo;paragraphs&rdquo;.
+Especially the paragraphs format was extremely sensitive to the generation temperature, and even with fairly low values (0.3) I sometimes got completely unfounded facts (e.g., that my dataset was created by researchers at the &ldquo;Max Planck Institute for Psycholingustics&rdquo;, despite me being at Heidelberg University&quot;).<br>
+Otherwise, especially for news-like articles, the consistency was surprisingly good, even if some references where incorrectly attributed in the German-to-English setting.</p>
+<p><img src="https://dennis-aumiller/posts/factual-error.png" alt="Factual mistake in the generated output of the German law text">
+<em>Instance of a factually incorrect statement. The law goes into effect on the 1st October, 2006 (last sentence in the German text); the stated date (23rd May 2006) is mentioned as the document creation date at the very beginning of the article.</em></p>
+<p>Regarding the multilinguality (4), I can happily report that it works to some extent; the endpoint is capable of &ldquo;processing&rdquo; German articles, but even with explicit prompts being added, will only respond in English. This is still a significant step-up, but probably not entirely useful for customers looking into summarizing documents in other languages.
+Translations were in my understanding pretty much always accurate; some fluency issues could be observed in the translation of the German law text, but I would argue that I myself could not have done a better job, either.</p>
+<p>Similarly, fluency or repetitions have not been an issue at all (5). In none of the tested scenarios did I encounter output text that was plain &ldquo;ungrammatical&rdquo;. I am not sure if Cohere employs output post-processing steps, such as <em>n</em>-gram blocking or similar, but it seems that the RLHF-trained models (i.e., most instruction fine-tuned models right now) have less problems with that anyways.<br>
+For longer input texts, I noticed that the system was focusing a lot on what appears to be (sub-)headings of the texts, or otherwise shorter segments; this has happened to me when utilizing embedding-based extractive methods (such as the modified LexRank approach mentioned before), which are generally suited better for shorter segments. This is not necessarily a bad thing, but requires careful pre-processing by users for instances where the actual document body is more relevant than heading text.</p>
+<p>The only problem regarding the sentence selection (2) was for the mail thread. While the output text accurately summarized the individual turns (e.g., individual responses without focusing on previous parts overly much), it failed to account for the &ldquo;reading direction&rdquo; of pasted mail inputs. Instead of reading &ldquo;bottom-to-top&rdquo;, as with most mail interactions, the system interpreted the reading direction as &ldquo;top-to-bottom&rdquo;, which inherently caused the summary to be inverted.
+The mail setting was also the example where it was the easiest to identify that sentences were not just chosen from the beginning, precisely because it did indeed focus on multiple different responses within the mail thread. The one negative thing about the mail summaries where the almost overly short summaries, even when setting to the longest output format. A particular variation in sentence length could be observed as well.<br>
+For other articles, it was a bit harder to tell where content was chosen from, especially for news-related documents (where important mentions are expected in the beginning, anyways). However, even in my own paper, it would refer to mentions that appeared well within the document body.
+This is a pretty decent indicator that it also works well in domains (3) where the input is <a href="https://arxiv.org/abs/1912.11602">less uniform than a news article</a>. I wasn&rsquo;t able to test it with medical documents (partially because I also lack domain knowledge), but for the legal use case it performed somewhat okay.</p>
+<p>A final word in the inference times (6): I would say that currently the model is prohibitively slow for any text &gt;10,000 characters, unless latency is not an issue (e.g., for pre-computed summaries). For the paper, processing time went on for around 4-6 seconds (estimated), but shorter texts were obviously much faster. I&rsquo;m also not sure if there are added benefits of using the non-free tier for inference latencies, but I don&rsquo;t think there are.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>This poses a question to which we certainly have a less clear picture right now.<br>
+In my opinion, there are several ways which are logical and immediate follow-ups on the existing model endpoint.
+I expect that they will <strong>expand the examples and documentation</strong> website. Currently, linked pages  in <a href="https://cohere.ai/use-case-summarization">their docs about summarization</a> still refer to the general-purpose generation endpoint (see, &ldquo;Build a summarizaiton app&rdquo; in the bottom left), which is precisely <strong>not</strong> the one to use for this task.<br>
+Secondly, <strong>explicit training for multilingual summary</strong> experiences could be a possible extension. The model already exhibits a (albeit weak) multilingual tendency, which allows users to explore foreign-to-English summarization settings. If Cohere manages to extend their functionality to some of the other languages with a potential customer base, this could be a realistic extension.<br>
+Something that will also likely be expanded is the <strong>degree of customization possible</strong>. While the (beta) endpoint already includes generic parameters such as &ldquo;length&rdquo;, &ldquo;extractiveness&rdquo; and a mild form of styling (&ldquo;bullets&rdquo; or &ldquo;paragraphs&rdquo; being the available choices), recent trends in summarization research have shifted to a much broader degree of &ldquo;controllable generation&rdquo;. Similar directions can be observed in the &ldquo;more general LLM research&rdquo;, where instruction-tuned tooling is strongly preferred by users over more generic LLMs.<br>
+While there is also an option to give user-specified free-form instructions is already in place, it <strong>currently does not seem to affect the produced output</strong> too much. If Cohere manages to expand on the customization options available this way, a much more generic set of &ldquo;summarization-like&rdquo; tasks could be approached. This includes, for example, writing <a href="https://aclanthology.org/2022.acl-long.237.pdf">entity-centric summaries</a>, where the summary provides a much more targeted text compared to a (broader) input document, or <a href="https://ai.googleblog.com/2021/01/totto-controlled-table-to-text.html">data-to-text</a> settings, which is highly relevant in financial/business settings.<br>
+However, more important will be the degree of <strong>adoption by clients</strong>; I suspect that we will see the emergence of more tailored endpoints in the near future, which specifically cater to the needs of different specialized domains, again, possibly for specific legal/financial/medical documents. Here, a much stricter focus on factuality is generally required, and if <em>useful</em> application scenarios can be identified, it requires the adoption of slightly more consistent summary generation than currently possible. I am not fully convinced at this point that the &ldquo;extractiveness&rdquo; parameter delivers the required level of factual accuracy, yet. I also have a particular pet-peeve with the &ldquo;randomness&rdquo; introduced by the temperature parameter in general, as it prevents reproducible outputs at all, it seems. If users are interested in consistent answers, then <strong>the bullets-style format seems to be the more reliable choice</strong>.</p>
+<p>In summary (no pun intended), it seems that Cohere has not released a major groundbreaking leap forward at the scale of chatGPT &ndash; but they might not have to. Providing a highly usable experience to a smaller set of dedicated users can pay off for them in the long run; a concise feature set with <em>real application value</em> to users will ultimately beat the comparatively flashy but less straightforward chatGPT.
+As for myself, I am currently evaluating the model on a broader dataset for performance on academically used evaluation metrics; so stay tuned for a part two!</p>
+<p>PS: This post&rsquo;s title image was taken in UBC&rsquo;s beautiful Botanical Garden, which I visited just before starting my exchange year in Toronto in August 2017.</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row next-prev-navigator">
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-we-know-about-their-model">What we know about their model</a>
+          <ul>
+            <li><a href="#hybrid-summarization-to-the-rescue">Hybrid Summarization to the rescue!</a></li>
+            <li><a href="#a-likely-extractor">A likely extractor</a></li>
+            <li><a href="#details-on-the-abstractive-part">Details on the abstractive part</a></li>
+          </ul>
+        </li>
+        <li><a href="#testing-the-waters">Testing the waters</a>
+          <ul>
+            <li><a href="#the-dataset">The &ldquo;dataset&rdquo;</a></li>
+            <li><a href="#result-summary">Result Summary</a></li>
+          </ul>
+        </li>
+        <li><a href="#whats-next">What&rsquo;s next?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:dennis.aumiller&#43;website@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>dennis.aumiller@gmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/dennlinger target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>dennlinger</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://www.linkedin.com/in/dennis-aumiller target="_blank" rel="noopener">
+                  <span><i class="fab fa-linkedin"></i></span> <span>Dennis Aumiller</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;49 176 81747622</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2023 Copyright. <a href="/impressum">Impressum</a> &amp; <a href="/datenschutz">Datenschutz</a></div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

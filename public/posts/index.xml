@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dennis Aumiller</title>
+    <link>https://dennis-aumiller.de/posts/</link>
+    <description>Recent content in Posts on Dennis Aumiller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Aug 2023 14:44:20 -0400</lastBuildDate><atom:link href="https://dennis-aumiller.de/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Green Card</title>
+      <link>https://dennis-aumiller.de/posts/green-card/</link>
+      <pubDate>Thu, 24 Aug 2023 14:44:20 -0400</pubDate>
+      
+      <guid>https://dennis-aumiller.de/posts/green-card/</guid>
+      <description>Filing for a Spousal Green Card from Abroad, an Attempted Guide with Timeline TL;DR: Immigrating into the US is a long and arduous process, even on &amp;ldquo;easy mode&amp;rdquo; when obtaining a permanent residence through a spouse. I detail the primary steps of the immigration process for a foreign-based consular filing process, which differs somewhat from the &amp;ldquo;standard&amp;rdquo; immigration process through US Citizenship and Immigration Services (USCIS). It involves 1. the pre-conditional filing for an expedited process through a consulate/embassy (form I-130), 2.</description>
+    </item>
+    
+    <item>
+      <title>Discovery of the New Cohere Summarization Endpoint</title>
+      <link>https://dennis-aumiller.de/posts/cohere-summarization/</link>
+      <pubDate>Sun, 05 Mar 2023 20:51:56 +0100</pubDate>
+      
+      <guid>https://dennis-aumiller.de/posts/cohere-summarization/</guid>
+      <description>Two weeks ago, Cohere.ai announced their new dedicated summarization endpoint! For someone currently doing their PhD on text summarization, this is both worrying, but obviously also a rather intriguing development: while recent advancements have been focusing on rather broadly applicable models (think, chatGPT), providing more task-specific alternatives seems to be the niche that Cohere is carving out for themselves.
+Adding to the surprise of seeing a dedicated summarization endpoint is the fact that text summarization is really hard; in the last 50 years, a lot of progress has been made, but our current state-of-the-art models still suffer from annoying problems such as correctly retaining factuality of the input text.</description>
+    </item>
+    
+    <item>
+      <title>Lunch Notes: &#39;The Internet Never Forgets&#39;, or does it?</title>
+      <link>https://dennis-aumiller.de/posts/the-internet-forgets/</link>
+      <pubDate>Fri, 20 Jan 2023 12:39:31 +0100</pubDate>
+      
+      <guid>https://dennis-aumiller.de/posts/the-internet-forgets/</guid>
+      <description>I recently started clearing out some of my old browser bookmarks, something I highly encourage you to do, too! Given that I have been in the academic world for close to ten years now, I still mix a lot of my personal browsing with the professionally required one, which created more and more bloat over time in my browser.
+Aside from the Mari Kondo-esque liberation it gives, I initially went through my bookmarks to finally start separating them into various categories, putting a more distinct divide between my &amp;ldquo;personal&amp;rdquo; and &amp;ldquo;professional&amp;rdquo; online footprint.</description>
+    </item>
+    
+    <item>
+      <title>New Personal Website</title>
+      <link>https://dennis-aumiller.de/posts/new-website/</link>
+      <pubDate>Tue, 09 Aug 2022 13:25:14 +0200</pubDate>
+      
+      <guid>https://dennis-aumiller.de/posts/new-website/</guid>
+      <description>I have recently migrated my personal website, which turned out to be hugely outdated, since I originally planned to write a platform entirely from scratch (spoiler: not a great idea with time constraints). Especially since I am not a trained web developer, I quickly realized that there are quite a few significant hurdles to overcome before I could have a somewhat decent system that relies on minimal outside dependencies, and even then, I already had acquired quite a bit of external &amp;ldquo;npm bloat&amp;rdquo;.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

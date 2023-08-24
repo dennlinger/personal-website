@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Summarization on Dennis Aumiller</title>
+    <link>https://dennis-aumiller.de/categories/summarization/</link>
+    <description>Recent content in Summarization on Dennis Aumiller</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Mar 2023 20:51:56 +0100</lastBuildDate><atom:link href="https://dennis-aumiller.de/categories/summarization/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Discovery of the New Cohere Summarization Endpoint</title>
+      <link>https://dennis-aumiller.de/posts/cohere-summarization/</link>
+      <pubDate>Sun, 05 Mar 2023 20:51:56 +0100</pubDate>
+      
+      <guid>https://dennis-aumiller.de/posts/cohere-summarization/</guid>
+      <description>Two weeks ago, Cohere.ai announced their new dedicated summarization endpoint! For someone currently doing their PhD on text summarization, this is both worrying, but obviously also a rather intriguing development: while recent advancements have been focusing on rather broadly applicable models (think, chatGPT), providing more task-specific alternatives seems to be the niche that Cohere is carving out for themselves.
+Adding to the surprise of seeing a dedicated summarization endpoint is the fact that text summarization is really hard; in the last 50 years, a lot of progress has been made, but our current state-of-the-art models still suffer from annoying problems such as correctly retaining factuality of the input text.</description>
+    </item>
+    
+    
+  </channel>
+</rss>
