@@ -1,7 +1,7 @@
 ---
 title: "Lunch Notes: 'The Internet Never Forgets', or does it?"
 date: 2023-01-20T12:39:31+01:00
-hero: images/other-hero.jpg
+hero: images/hero-forget.jpg
 draft: false
 ---
 

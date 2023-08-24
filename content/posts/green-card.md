@@ -2,10 +2,13 @@
 title: "Filing for a Spousal Green Card from Abroad, An Experience Report"
 date: 2023-08-24T14:44:20-04:00
 draft: false
+hero: images/hero-green-card.jpg
+tags: ["US-Live"]
+categories: ["US-Live"]
 ---
 
 
-TL;DR: Immigrating into the US is a long and arduous process, even on "easy mode" when obtaining a permanent residence through a spouse with a strong passport. I detail the primary steps of the immigration process for a foreign-based consular filing process, which differs somewhat from the "standard" immigration process through US Citizenship and Immigration Services (USCIS). It involves 1. the pre-conditional filing for an expedited process through a consulate/embassy (form I-130), 2. similar-ish filing of the "green card application form" (form DS-260), 3. a visa interview at the consulate, for which you 4. need a whole lot of additional forms, documents and the like.
+TL;DR: Immigrating into the US is a long and arduous process, even on "easy mode" when obtaining a permanent residence through a spouse with a strong passport. Below, I detail the primary steps of the immigration process for a foreign-based consular filing process, which differs somewhat from the "standard" immigration process through US Citizenship and Immigration Services (USCIS). It involves 1. the pre-conditional filing for an expedited process through a consulate/embassy (form I-130), 2. similar-ish filing of the "green card application form" (form DS-260), 3. a visa interview at the consulate, for which you 4. need a whole lot of additional forms, documents and the like.
 A full timeline can be found at the end of this blog post!
 
 I just moved to the United States, primarily as motivational support for my amazing wife, who will start her own PhD this year! The process of moving to the US is not an easy one, and I found that a lot of the sources online don't really document the process in its entirety super well.  
@@ -36,7 +39,7 @@ Other disclaimers:
 - This article is discussing the prospective immigration *from abroad*, which implies form I-130. If you are already living in the US, you might want to look up information on form I-485 instead. The process is (from what I understand) very different, so YMMV.
 - This is not legal advice. Please always consult with an immigration lawyer (instead of a random online stranger) if you are looking for particular help regarding your individual circumstances!
 
-# The Pre-Start: Requesting Direct Consular Filing (DCF)
+## Part 1: Requesting Direct Consular Filing (DCF)
 
 A definite advantage during the application process was the US nationality of my wife.
 There are a number of different visa categories (way more than I could list here), but the general entry points for any skilled worker are basically the H-1B visa (sponsored by an employer), or the J-1 visa for academics (postdoctoral scholars, could have been potentially relevant in my case).  
@@ -245,7 +248,7 @@ Other instructions included in the visa package were pretty self-explanatory, an
 
 **Info:** The forms are pretty clear that the immigration (or at least processing) of your physical I-551 is not possible until the outstanding fee is paid to USCIS. While it is again possible to pay by credit card, we did that as soon as possible, to avoid any hassle during the immigration process itself.
 
-## Immigrating
+## Part 4: Immigrating
 
 Immigrating was probably the most anticlimactic part of the entire process. There are a few times when it should definitely be mentioned that you are immigrating, instead of visiting, especially during the airport check-in. There, desk agents will use the visa page in your passport instead of checking your ESTA (or tourist visa).
 Once arriving in the US, you can simply proceed to the regular customs operations for tourists (at least, this was the way at Newark International Airport, where we arrived). The immigrations officer will then take your provided documents (if any were sent to you beforehand), and take you to a separate area for immigrants. My wife was allowed to join me during this, by the way.
@@ -315,4 +318,4 @@ I will update the timeline with the eventual arrival dates of my separate I-551 
 2. A great thread on Reddit with timeline for a spousal DCF process: https://www.reddit.com/r/USCIS/comments/ra9ctf/direct_consular_filing_frankfurt_timeline/
 3. Forum board clarifying the "need" of providing documents through CEAC for DCF: https://www.visajourney.com/forums/topic/774723-no-option-to-upload-documents-after-completing-ds-260/  
 
-
+PS: As always, a quick explainer on the hero image at the very top. This one was taken not too long ago during our summit attempt of "Ahornspitze" in Zillertal, Austria. Unfortunately, we had to eventually turn around and abort due to bad conditions -- snow mid-August!
