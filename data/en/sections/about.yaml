@@ -9,15 +9,15 @@ section:
   template: sections/about.html
 
 # your designation
-designation: PhD Student
+designation: Member of Technical Staff
 # your company information
 company:
-  name: Database Systems Research Group, Heidelberg University
-  url: "https://dbs.ifi.uni-heidelberg.de/team/aumiller"
+  name: Cohere
+  url: "https://cohere.com"
 
 
 # a summary about you
-summary: 'I am currently a fourth-year PhD Student at Heidelberg University, focusing primarily on Text Summarization, with a special interest in generating aspect-focused narratives. I do have a general interest in Natural Language Processing, particularly applied Machine Learning for NLP.
+summary: 'I am currently a Member of Technical Staff at Cohere, where I am working on data and evaluation efforts. Additionally, I am still finishing up my dissertation at the [Data Science Group at Heidelberg University](https://dbs.ifi.uni-heidelberg.de/team/aumiller). My academic work primarily focuses on Text Summarization, with a special interest in generating aspect-focused narratives. I do have a general interest in Natural Language Processing, particularly applied Machine Learning for NLP.
 I previously interned with [Amazon Research](https://amazon.science) and [SAP](https://sap.com), and helped build a search engine for lawyers at [Codefy](https://codefy.de/).
 As a commitment to open & reproducible research, I publish code repositories for my associated publications [on Github](https://github.com/dennlinger). However, my biggest contributions to open source are my [questions and answers on Stackoverflow](https://stackoverflow.com/users/3607203/dennlinger), which have to date reached more than half a million people worldwide.'
 

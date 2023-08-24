@@ -30,6 +30,16 @@ experience:
 #     - Lead backend team.
 
 - company:
+    name: Cohere
+    url: "https://cohere.com"
+    location: Philadelphia, USA (remote)
+    overview: As part of the data and evaluation team, my main objectives are to improve Cohere's primary generative model through a series of automated data transformations, as well as improvements to their evaluation harness.
+  positions:
+  - designation: Member of Technical Staff
+    start: Sep 2023
+    end: current
+
+- company:
     name: Amazon Research
     url: "https://www.amazon.science"
     location: Berlin, Germany

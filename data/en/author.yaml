@@ -14,9 +14,9 @@ contactInfo:
 
 # some summary about what you do
 summary:
+  - Dataset Curation
   - Text Summarization
   - Text Simplification
-  - Information Retrieval
   - Python
   - Huggingface
   - Natural Language Processing
