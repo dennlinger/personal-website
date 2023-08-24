@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posts</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/favicon_hu685b8fb3d4b27a2cc7f4e33909b9f6ef_27442_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dennis-aumiller.de/posts/" />
+
+
+    
+    
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      Dennis Aumiller</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  
+  
+
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Blog</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+      
+        
+          <div class="post-card">
+  <a href="/posts/green-card/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Green Card</h5>
+        <p class="card-text post-summary">Filing for a Spousal Green Card from Abroad, an Attempted Guide with Timeline TL;DR: Immigrating into the US is a long and arduous process, even on &ldquo;easy mode&rdquo; when obtaining a permanent residence through a spouse. I detail the primary steps of the immigration process for a foreign-based consular filing process, which differs somewhat from the &ldquo;standard&rdquo; immigration process through US Citizenship and Immigration Services (USCIS). It involves 1. the pre-conditional filing for an expedited process through a consulate/embassy (form I-130), 2.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">August 24, 2023</span>
+        <a
+        href="/posts/green-card/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/cohere-summarization/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Discovery of the New Cohere Summarization Endpoint</h5>
+        <p class="card-text post-summary">Two weeks ago, Cohere.ai announced their new dedicated summarization endpoint! For someone currently doing their PhD on text summarization, this is both worrying, but obviously also a rather intriguing development: while recent advancements have been focusing on rather broadly applicable models (think, chatGPT), providing more task-specific alternatives seems to be the niche that Cohere is carving out for themselves.
+Adding to the surprise of seeing a dedicated summarization endpoint is the fact that text summarization is really hard; in the last 50 years, a lot of progress has been made, but our current state-of-the-art models still suffer from annoying problems such as correctly retaining factuality of the input text.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">March 5, 2023</span>
+        <a
+        href="/posts/cohere-summarization/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/the-internet-forgets/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Lunch Notes: &#39;The Internet Never Forgets&#39;, or does it?</h5>
+        <p class="card-text post-summary">I recently started clearing out some of my old browser bookmarks, something I highly encourage you to do, too! Given that I have been in the academic world for close to ten years now, I still mix a lot of my personal browsing with the professionally required one, which created more and more bloat over time in my browser.
+Aside from the Mari Kondo-esque liberation it gives, I initially went through my bookmarks to finally start separating them into various categories, putting a more distinct divide between my &ldquo;personal&rdquo; and &ldquo;professional&rdquo; online footprint.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">January 20, 2023</span>
+        <a
+        href="/posts/the-internet-forgets/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/new-website/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">New Personal Website</h5>
+        <p class="card-text post-summary">I have recently migrated my personal website, which turned out to be hugely outdated, since I originally planned to write a platform entirely from scratch (spoiler: not a great idea with time constraints). Especially since I am not a trained web developer, I quickly realized that there are quite a few significant hurdles to overcome before I could have a somewhat decent system that relies on minimal outside dependencies, and even then, I already had acquired quite a bit of external &ldquo;npm bloat&rdquo;.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">August 9, 2022</span>
+        <a
+        href="/posts/new-website/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+    </div>
+    <div class="paginator">
+      
+    </div>
+  </div>
+</section>
+
+
+      
+       
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:dennis.aumiller&#43;website@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>dennis.aumiller@gmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/dennlinger target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>dennlinger</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://www.linkedin.com/in/dennis-aumiller target="_blank" rel="noopener">
+                  <span><i class="fab fa-linkedin"></i></span> <span>Dennis Aumiller</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;49 176 81747622</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2023 Copyright. <a href="/impressum">Impressum</a> &amp; <a href="/datenschutz">Datenschutz</a></div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+    <script src="/js/list.js"></script>
+
+
+    
+</body>
+</html>

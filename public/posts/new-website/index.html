@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Personal Website</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/favicon_hu685b8fb3d4b27a2cc7f4e33909b9f6ef_27442_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="New Personal Website" />
+<meta property="og:description" content="I have recently migrated my personal website, which turned out to be hugely outdated, since I originally planned to write a platform entirely from scratch (spoiler: not a great idea with time constraints). Especially since I am not a trained web developer, I quickly realized that there are quite a few significant hurdles to overcome before I could have a somewhat decent system that relies on minimal outside dependencies, and even then, I already had acquired quite a bit of external &ldquo;npm bloat&rdquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dennis-aumiller.de/posts/new-website/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-09T13:25:14+02:00" />
+<meta property="article:modified_time" content="2022-08-09T13:25:14+02:00" />
+
+
+    
+    
+<meta name="description" content="New Personal Website" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      Dennis Aumiller</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Blog</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/default-avatar_hu14f0e8d4ff4f8d886d80ac94e4f6abfd_365411_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Dennis Aumiller</h5>
+          <p>Tuesday, August 9, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>New Personal Website</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>I have recently migrated my personal website, which turned out to be hugely outdated, since I originally planned to write a platform entirely from scratch (spoiler: not a great idea with time constraints).
+Especially since I am not a trained web developer, I quickly realized that there are quite a few significant hurdles to overcome before I could have a somewhat decent system that relies on minimal outside dependencies, and even then, I already had acquired quite a bit of external &ldquo;npm bloat&rdquo;.
+This doesn&rsquo;t even include the time I had to spend figuring out how to efficiently update my website in case of changes without requiring logins to my server every couple of days&hellip;</p>
+<p>Deciding to finally move on, I was looking around for a bit to see which pages (and template styles) where particularly attractive for a &ldquo;dual use site&rdquo;. I wanted to be represented both in my <a href="https://dbs.ifi.uni-heidelberg.de/team/aumiller/">current academic role</a>, but also in a future career in industry.
+The focus on each of these is slightly different, which makes an integration suitable for both aspects challenging.</p>
+<p>Ultimately, the new website is based on the wonderful Hugo template <a href="https://github.com/hugo-toha/toha">toha</a>, which I have modified in some key aspects to suit my own style slightly better.<br>
+Funnily enough, one of the tasks that cost me by far the most time was me trying to stubbornly shuffle around the socials buttons right to the top. Even now, I still do not have it properly centered for all devices (especially apparent on mobile), but there is still time to fix this in the future.</p>
+<p>Despite this effort, the site does a much better job at allowing me to post regular content, as it offers a dedicated <a href="https://dennis-aumiller.de/posts/">blog page</a>, which you are currently reading!
+In particular, the close ties to markdown in Hugo makes it trivially easy for me to write content, without having to edit later styling elements by hand, which was a huge plus in the decision to move forward.</p>
+<p>Some of the more general points that I want to highlight in my experience with Hugo (and this particular template) so far, including some of the encountered downsides:</p>
+<ul>
+<li>Hugo does offer a variety of templates that all do look nice in their respective demo pages (see many of the examples directly linked in the <a href="https://themes.gohugo.io/">Hugo template gallery</a>). However, choosing one that actually satisfies all the criteria for my own needs is quite tricky. I wanted a reactive view, incorporation of publications, a dedicated blog page, as well as a template that could in the future be easily changed towards a more &ldquo;industry-focused&rdquo; website, assuming that I move out of academia. Even when there are sites that (on paper) match all these points, it is not immediately clear how high the effort additional required effort is to customize these pages, which was a bit annoying. At least the template I went with, toha, does offer an exceptionally well-written document that explains how to set up different page elements, but does not give too much details on how to adjust these beyond the &ndash; sometimes rather basic &ndash; additional properties.</li>
+<li>Developing the page itself was comparatively a very pleasant experience. <code>hugo [-D] server</code> is an exceptional feature, automatically reloading pages. When something went terribly wrong and the page wouldn&rsquo;t load at all, the error logs were usually concise enough to figure out the cause rather quickly. This is also especially nice, since it does not require me to maintain a list of dependencies like with npm.</li>
+<li>The templating itself is fairly intuitive, and for users having some basic experience with &ldquo;classic&rdquo; HTML/CSS/JS stacks, the page elements will feel very familiar. Despite having never worked with Hugo before, I was able to easily make modifications to otherwise more complex elements like dynamically built lists. To be fair, a large portion probably also depends on the cleanliness and maintenance of the used template, so I highly recommend looking for an actively maintained project with a minimum popularity, to save yourself some headache.</li>
+<li>I personally run the Hugo server through a nginx reverse proxy, which caused me some headache during the first deployment. I would say this can be largely attributed to my prior experience with nginx, which is not much&hellip; Still, I believe that with regards to deployments (or other configuration options beyond what is Hugo), there are still not too many resources out there. It could have also been that I was simply not looking in the right place, or for the right terms.This is less of an issue if one were to deploy through Github pages, where a ton of tutorials exist, which brings me to my next point.</li>
+<li>For inexperienced users, or people that really want to have a minimal amount of interaction with the site setup, the end-to-end tutorials for Github pages are fantastic. A large portion of the issues I encountered stemmed from me wanting to change things beyond the basics that were provided. This included both the internal Hugo features (e.g., styling or page elements), as well as the deployment (hosted on my own infrastructure instead of Github pages).</li>
+<li>Finally, I am still missing some of the key features that a modern website should now offer out of the box: I had to create a manual &ldquo;blog-like&rdquo; entry, which currently serves as my <a href="https://dennis-aumiller.de/impressum/">imprint</a> and <a href="https://dennis-aumiller.de/datenschutz/">data privacy note</a>. With a general focus on privacy aspects in the recent years, I was surprised that even now, Hugo (or rather, the current template) does not natively ship with a cookie banner extension. Ultimately, I will likely stick with this page for a while; especially since I still do have some issues to deal with.</li>
+<li>Also, optimization is an aspect that I really like to take seriously. Unfortunately, from an SEO perspective, the current state of the site is also far from being optimal. But at least it is a start.</li>
+</ul>
+<p>I am still not sure how frequently (or lengthy) I will post on this website, but at least the basis of the blog is finally done!</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row next-prev-navigator">
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:dennis.aumiller&#43;website@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>dennis.aumiller@gmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/dennlinger target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>dennlinger</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://www.linkedin.com/in/dennis-aumiller target="_blank" rel="noopener">
+                  <span><i class="fab fa-linkedin"></i></span> <span>Dennis Aumiller</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;49 176 81747622</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2023 Copyright. <a href="/impressum">Impressum</a> &amp; <a href="/datenschutz">Datenschutz</a></div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

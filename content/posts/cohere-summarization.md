@@ -1,7 +1,7 @@
 ---
 title: "Discovery of the New Cohere Summarization Endpoint"
 date: 2023-03-05T20:51:56+01:00
-hero: images/cohere-hero.png
+hero: images/hero-cohere.png
 tags: ["Summarization"]
 categories: ["Summarization"]
 draft: false
