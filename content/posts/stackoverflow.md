@@ -2,7 +2,7 @@
 title: "Reflections on Reaching 1 Million People on Stackoverflow"
 date: 2023-11-06T22:13:25-05:00
 draft: false
-hero: images/hero-green-card.jpg
+hero: images/hero-stackoverflow.png
 tags: ["Programming"]
 categories: ["Programming"]
 ---
