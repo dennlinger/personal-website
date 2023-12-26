@@ -1,7 +1,10 @@
 ---
-title: "Reflecting on Reacing 1 Million People on stackoverflow.com"
+title: "Reflections on Reaching 1 Million People on Stackoverflow"
 date: 2023-11-06T22:13:25-05:00
 draft: false
+hero: images/hero-green-card.jpg
+tags: ["Programming"]
+categories: ["Programming"]
 ---
 This week, I have officially reached [more than 1 million people on the website stackoverflow.com](https://stackoverflow.com/users/3607203/dennlinger?tab=profile)! I wanted to take a moment to reflect on this "achievement", what it means for my professional career, and why I simultaneously believe that it is sheer luck (and a LOT of procrastination) that got me here.  
 As always, if you have any questions or comments, feel free to message me at [dennis.aumiller@gmail.com](mailto:dennis.aumiller+website@gmail.com) or reach out [on Twitter](twitter.com/d_aumiller).
