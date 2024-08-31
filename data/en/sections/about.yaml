@@ -17,9 +17,9 @@ company:
 
 
 # a summary about you
-summary: 'I am currently a Member of Technical Staff at Cohere, where I am working on data and evaluation efforts. Additionally, I am still finishing up my dissertation at the [Data Science Group at Heidelberg University](https://dbs.ifi.uni-heidelberg.de/team/aumiller). My academic work primarily focuses on Text Summarization, with a special interest in generating aspect-focused narratives. I do have a general interest in Natural Language Processing, particularly applied Machine Learning for NLP.
+summary: 'I am currently a Member of Technical Staff at Cohere, where I focus on improving human evaluation for Large Language Models. Before that, I obtained my PhD from the [Data Science Group at Heidelberg University](https://ds.ifi.uni-heidelberg.de/team/aumiller). My academic work primarily focused on automatic text summarization, with a special interest in generating aspect-focused summaries. Beyond that, I do have a broader appreciation for research in applied Machine Learning for Natural Language Processing (NLP).
 I previously interned with [Amazon Research](https://amazon.science) and [SAP](https://sap.com), and helped build a search engine for lawyers at [Codefy](https://codefy.de/).
-As a commitment to open & reproducible research, I publish code repositories for my associated publications [on Github](https://github.com/dennlinger). However, my biggest contributions to open source are my [questions and answers on Stackoverflow](https://stackoverflow.com/users/3607203/dennlinger), which have to date reached more than half a million people worldwide.'
+During my PhD studies, I committed to releasing most of my research artifacts [on Github](https://github.com/dennlinger). However, my biggest contributions to open source are my [questions and answers on Stackoverflow](https://stackoverflow.com/users/3607203/dennlinger), which have by now reached more than one million people worldwide.'
 
 # TODO: These were moved to the main author page. Currently not displayed at all on this particular element.
 # # your social links

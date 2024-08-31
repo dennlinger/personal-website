@@ -14,7 +14,7 @@ section:
 skills:
 - name: Python
   # logo: "/images/sections/skills/pytorch.svg"
-  summary: "This is the primary language used in most of my projects. I am a strong proponent of [PEP-8](https://peps.python.org/pep-0008/) and function typing. On top, I am experienced in deploying and maintaining my own Python packages on PyPI."
+  summary: "Python is the language I work with on a daily basis. I am a strong proponent of [PEP-8](https://peps.python.org/pep-0008/) and typing. I have previously published and maintained my own packages on PyPI."
   # url: "https://python.org"
 
 - name: Machine Learning
@@ -37,4 +37,4 @@ skills:
 
 - name: Mentorship & Advising
   # logo: "todo"
-  summary: "As a PhD student, I have been supervising a number of student projects, including semester research practicals, seminar projects, as well as BSc & MSc theses. Over time, I have developed my own system for effective supervision."
+  summary: "As a PhD student, I have been supervising student projects, including semester research practicals, seminar projects, as well as BSc & MSc theses. Over time, I have developed my own system for effective supervision, with a focus on teaching software engineering best practices."
