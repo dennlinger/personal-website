@@ -3,8 +3,8 @@ title: "Filing for a Spousal Green Card from Abroad, An Experience Report"
 date: 2023-08-24T14:44:20-04:00
 draft: false
 hero: images/hero-green-card.jpg
-tags: ["US-Live"]
-categories: ["US-Live"]
+tags: ["US-Life"]
+categories: ["US-Life"]
 ---
 
 
@@ -262,16 +262,16 @@ And with that, it is done! The last step was to get all of our luggage, but the 
 
 The entire process for applying to the Green Card is quite costly. The summation of the associated costs for my specific case can be broken down roughly as follows
 
-   535 $   - Filing fee form I-130 (to be paid as a cheque!)
-    40 $   - certified translation of documents (only 2 pages were actually translated)
-   325 $   - Filing fee form DS-260 (paid at the consulate during the visa interview)
-   430 $   - (390€) Medical Exam (costs may vary depending on the specific doctor's office)
-    16 $   - (~16€) Additional lab tests for medical exam (cost may vary depending on required tests)
-    10 $   - Stamps for special delivery letters (cheque US to Germany & Sending the I-130 package)
-    28 $   - US passport-style pictures for both petitioner and beneficiary
-   120 $   - Travel costs to/from Frankfurt (medical exam + visa appointment)
-    30 $   - "Premium Delivery" of visa package (the alternative is pick-up in Frankfurt)
-   220 $   - USCIS processing fee (to be paid before first arrival)
+   535 $   - Filing fee form I-130 (to be paid as a cheque!)  
+    40 $   - certified translation of documents (only 2 pages were actually translated)  
+   325 $   - Filing fee form DS-260 (paid at the consulate during the visa interview)  
+   430 $   - (390€) Medical Exam (costs may vary depending on the specific doctor's office)  
+    16 $   - (~16€) Additional lab tests for medical exam (cost may vary depending on required tests)  
+    10 $   - Stamps for special delivery letters (cheque US to Germany & Sending the I-130 package)  
+    28 $   - US passport-style pictures for both petitioner and beneficiary  
+   120 $   - Travel costs to/from Frankfurt (medical exam + visa appointment)  
+    30 $   - "Premium Delivery" of visa package (the alternative is pick-up in Frankfurt)  
+   220 $   - USCIS processing fee (to be paid before first arrival)  
 
 = 1754 $  Total
 
